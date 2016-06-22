@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#overflow-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.gray-background {
+  background-color: #e9e9eb;
+}
+
+.black-text {
+  color: black;
+}
+
+.blue-text {
+  color: #306bc1;
+}
