@@ -1,0 +1,23 @@
+{
+  "name": "Mavericks",
+  "homepage": "https://github.com/BlickLabs/Mavericks",
+  "authors": [
+    "Alan Sanchez <sanchezpineda03@gmail.com>"
+  ],
+  "description": "Mavericks webpage",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}
