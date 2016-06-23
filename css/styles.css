@@ -513,6 +513,7 @@ html, body {
 
 #form-container form {
   display: inline-block;
+  margin-bottom: 100px;
   margin-top: -20px;
   width: 70%;
 }
