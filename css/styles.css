@@ -170,6 +170,8 @@ html, body {
 
 #navbar-trigger-label {
   color: white;
+  cursor: pointer;
+  cursor: hand;
   display: inline-block;
   float: right;
   margin-right: 30px;
@@ -661,9 +663,10 @@ footer .max-width {
   }
 
   .two-columns .white-container {
+    margin-bottom: 50px;
+    margin-top: 0;
     text-align: center;
     width: 90%;
-    margin-top: 0;
   }
 
   #mavericks-footer-logo {
