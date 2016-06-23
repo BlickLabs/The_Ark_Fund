@@ -133,6 +133,12 @@ html, body {
   background-size: cover;
 }
 
+.max-width {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
 #mavericks-navbar {
   background-color: white;
   height: 115px;
@@ -269,7 +275,7 @@ html, body {
   padding: 100px 150px 300px 0;
 }
 
-.homepage-gray-section {
+.homepage-gray-divisor {
   font-size: 24px;
   line-height: 115%;
   padding: 50px;
@@ -279,6 +285,10 @@ html, body {
 #homepage-cover-1 {
   background-image: url('../img/background-03.jpg');
   color: white;
+}
+
+#homepage-cover-2 {
+  background-image: url('../img/background-04.jpg');
 }
 
 .homepage-cover {
@@ -291,11 +301,28 @@ html, body {
 }
 
 .homepage-divisor {
-  padding: 100px;
+  padding: 100px 40px;
 }
 
 #homepage-divisor-1 {
   font-size: 33px;
+}
+
+#homepage-divisor-2 {
+  font-size: 30px;
+}
+
+#homepage-divisor-3 {
+  font-size: 48px;
+}
+
+#homepage-divisor-4 {
+  color: white;
+  font-size: 25px;
+}
+
+#homepage-divisor-5 {
+  font-size: 58px;
 }
 
 .homepage-diagram {
@@ -368,4 +395,108 @@ html, body {
 
 .homepage-diagram-row:nth-child(4) .homepage-diagram-arrow {
   transform: translate(-100%, 45px);
+}
+
+#homepage-gray-section {
+  background-color: #eee;
+  height: auto !important;
+}
+
+.white-container {
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.white-container .white-container-title {
+  font-size: 46px;
+}
+
+.white-container .learn-more {
+  color: black;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 80px;
+}
+
+.two-columns .white-container-text {
+  font-family: 'Akzidenz Grotesk';
+  font-size: 19px;
+  margin-top: 25px;
+}
+
+.two-columns .white-container {
+  margin: 60px 20px 100px 20px;
+  padding: 50px 100px;
+  text-align: right;
+  transition: all 0.2s;
+  width: 45%;
+}
+
+.two-columns .white-container:hover {
+  transform: translateY(20px);
+}
+
+#homepage-investments {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.homepage-investment-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  display: inline-block;
+  height: 150px;
+  margin: 20px 1.5%;
+  width: 30%;
+}
+
+#boletia-logo {
+  background-image: url('../img/icons/icons-11.png');
+}
+
+#the-pool-logo {
+  background-image: url('../img/icons/icons-12.png');
+}
+
+#econduce-logo {
+  background-image: url('../img/icons/icons-13.png');
+}
+
+#ingredienta-logo {
+  background-image: url('../img/icons/icons-16.png');
+}
+
+#nubleer-logo {
+  background-image: url('../img/icons/icons-15.png');
+}
+
+#arriv-io-logo {
+  background-image: url('../img/icons/icons-14.png');
+}
+
+#boletia-logo:hover {
+  background-image: url('../img/icons/Logos_color-04.png');
+}
+
+#the-pool-logo:hover {
+  background-image: url('../img/icons/Logos_color-01.png');
+}
+
+#econduce-logo:hover {
+  background-image: url('../img/icons/Logos_color-05.png');
+}
+
+#ingredienta-logo:hover {
+  background-image: url('../img/icons/Logos_color-02.png');
+}
+
+#nubleer-logo:hover {
+  background-image: url('../img/icons/Logos_color-03.png');
+}
+
+#arriv-io-logo:hover {
+  background-image: url('../img/icons/Logos_color-06.png');
 }
