@@ -87,7 +87,6 @@ html, body {
 }
 
 .full-vh-container {
-  padding-top: 115px;
   height: 100vh;
 }
 
@@ -127,6 +126,10 @@ html, body {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
+}
+
+.cover  {
+  background-size: cover;
 }
 
 #mavericks-navbar {
@@ -270,4 +273,17 @@ html, body {
   line-height: 115%;
   padding: 50px;
   width: 100%;
+}
+
+#homepage-cover-1 {
+  background-image: url('../img/background-03.jpg');
+  color: white;
+}
+
+.homepage-cover {
+  height: 80vh;
+}
+
+.homepage-cover p {
+  width: auto;
 }
