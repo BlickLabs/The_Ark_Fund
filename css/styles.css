@@ -119,6 +119,7 @@ html, body {
   content: ' ';
   display: inline-block;
   height: 100%;
+  margin-left: -1px;
   vertical-align: middle;
   width: 0;
 }
@@ -285,6 +286,7 @@ html, body {
 #homepage-cover-1 {
   background-image: url('../img/background-03.jpg');
   color: white;
+  padding: 0 50px;
 }
 
 #homepage-cover-2 {
@@ -577,6 +579,7 @@ footer {
 #mavericks-footer-logo {
   left: 50%;
   position: relative;
+  transform: translateX(-50%);
 }
 
 footer .max-width {
@@ -597,4 +600,136 @@ footer .max-width {
   font-size: 11px;
   margin: 0 10px;
   vertical-align: middle;
+}
+
+/* WIDTH BASED MEDIA QUERIES*/
+
+@media screen and (max-width: 1322px) {
+  .two-columns .white-container {
+    padding: 30px;
+  } 
+}
+
+@media screen and (max-width: 1300px) {
+  .homepage-diagram {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .homepage-diagram-row {
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  .homepage-diagram-title {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .homepage-diagram-text {
+    display: inline-block;
+    max-width: 600px;
+    width: 100% !important;
+  }
+
+  .homepage-diagram-button {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .homepage-diagram-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .homepage-introduction {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  } 
+}
+
+@media screen and (max-width: 975px) {
+  * {
+    text-align: center !important;
+  }
+
+  #mavericks-navbar {
+    text-align: left !important;
+  }
+
+  .two-columns .white-container {
+    text-align: center;
+    width: 90%;
+    margin-top: 0;
+  }
+
+  #mavericks-footer-logo {
+    display: inline-block;
+    left: 0;
+    margin-top: 30px;
+    transform: none;
+  }
+
+  footer .max-width {
+    left: 0;
+    position: relative;
+    transform: none;
+  }
+
+  footer .footer-social-media a {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .homepage-investment-item {
+    height: 150px;
+    margin: 0;
+    width: 80%;
+  }
+
+  #homepage-cover-2 img {
+    height: auto;
+    width: 100%;
+  }
+
+  #homepage-divisor-4 {
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #homepage-cover-1 {
+    font-size: 30px;
+  }
+
+  .homepage-divisor {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* HEIGHT BASED MEDIA QUERIES*/
+
+@media screen and (max-height: 710px) {
+  #homepage-cover-2 {
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .navbar-list-container {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .navbar-list-container {
+    font-size: 18px;
+  }
 }
