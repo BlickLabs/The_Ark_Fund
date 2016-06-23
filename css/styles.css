@@ -156,6 +156,7 @@ html, body {
   background-repeat: no-repeat;
   display: inline-block;
   height: 115px;
+  margin: 10px 0 0 10px;
   transition: background-image 0.2s;
   width: 160px;
 }
@@ -174,7 +175,7 @@ html, body {
   cursor: hand;
   display: inline-block;
   float: right;
-  margin-right: 30px;
+  margin-right: 50px;
   margin-top: 23px;
   position: relative;
 }
@@ -431,7 +432,7 @@ html, body {
 }
 
 .two-columns .white-container {
-  margin: 60px 20px 100px 20px;
+  margin: 0px 20px 100px 20px;
   padding: 50px 100px;
   text-align: right;
   transition: all 0.2s;
