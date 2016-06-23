@@ -500,3 +500,67 @@ html, body {
 #arriv-io-logo:hover {
   background-image: url('../img/icons/Logos_color-06.png');
 }
+
+#form-section {
+  background-image: url('../img/icons/icons-19.png');
+  background-position: -10px 100%;
+  background-repeat: no-repeat;
+}
+
+#form-container {
+  max-width: 600px;
+}
+
+#form-container form {
+  display: inline-block;
+  margin-top: -20px;
+  width: 70%;
+}
+
+#form-container form * {
+  background-color: white;
+  border: 2px #306bc1 solid;
+  color: #306bc1;
+  display: block;
+  font-family: 'Akzidenz Grotesk';
+  font-style: 16px;
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  width: 100%;
+}
+
+#contact-send {
+  background-color: #306bc1 !important;
+  border: none !important;
+  color: white !important;
+  color: #306bc1;
+  margin: 30px auto;
+  width: 35% !important;
+}
+
+#form-container form *,
+#form-container form *:focus,
+#form-container form *:active {
+  outline: none;
+}
+
+#form-container form *::-moz-placeholder {
+  color: #306bc1;
+}
+
+#form-container form *::-webkit-input-placeholder {
+  color: #306bc1;
+}
+
+#form-container form *:-ms-input-placeholder {
+  color: #306bc1;
+}
+
+#form-container form *:-moz-placeholder {
+  color: #306bc1;
+}
+
+#contact-message {
+  height: 150px;
+  resize: none;
+}
