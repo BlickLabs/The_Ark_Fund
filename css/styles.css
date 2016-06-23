@@ -1,11 +1,51 @@
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url(../fonts/AkzidenzGrotesk-Regular-2.otf);
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  font-weight: bold;
+  src: url(../fonts/AkzidenzGrotesk-Bold-2.otf);
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  font-weight: lighter;
+  src: url(../fonts/AkzidenzGrotesk-Light-2.otf);
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  font-weight: lighter;
+  font-style: italic;
+  src: url(../fonts/AkzidenzGrotesk-LightItalic-2.otf);
+}
+
+@font-face {
+  font-family: 'Aleo';
+  src: url(../fonts/Aleo-Regular-2.otf);
+}
+
+@font-face {
+  font-family: 'Aleo';
+  font-style: italic;
+  src: url(../fonts/Aleo-Italic-2.otf);
+}
+
+@font-face {
+  font-family: 'Aleo';
+  font-weight: bold;
+  src: url(../fonts/Aleo-Bold-2.otf);
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-}
-
-#overflow-container {
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .gray-background {
@@ -18,4 +58,155 @@ html, body {
 
 .blue-text {
   color: #306bc1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+#overflow-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#mavericks-navbar {
+  height: 70px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10 !important;
+}
+
+#mavericks-logo {
+  background-image: url('../img/icons/icons-03.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 130px;
+  transition: background-image 0.2s;
+  width: 160px;
+}
+
+#navbar-trigger:checked ~ #mavericks-logo {
+  background-image: url('../img/icons/iconss-19.png');
+}
+
+#navbar-trigger {
+  display: none;
+}
+
+#navbar-trigger-label {
+  color: white;
+  display: inline-block;
+  float: right;
+  margin-right: 30px;
+  margin-top: 23px;
+  position: relative;
+}
+
+#navbar-trigger-label span {
+  border-radius: 2px;
+  background-color: black;
+  display: block;
+  height: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 40px;
+}
+
+#navbar-trigger-label span:not(:nth-child(1)) {
+  margin-top: 6px;
+}
+
+#navbar-trigger-label span:nth-child(2) {
+  background-color: white;
+}
+
+#navbar-trigger-label span:nth-child(3) {
+  margin-top: -4px;
+}
+
+#navbar-trigger-label span:nth-child(4) {
+  background-color: #306bc1;
+}
+
+#navbar-trigger:checked ~ #navbar-trigger-label span:nth-child(1),
+#navbar-trigger:checked ~ #navbar-trigger-label span:nth-child(4){
+  width: 0;
+}
+
+#navbar-trigger:checked ~ #navbar-trigger-label span:nth-child(2){
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+
+#navbar-trigger:checked ~ #navbar-trigger-label span:nth-child(3){
+  transform: rotate(45deg);
+}
+
+.navbar-list-container {
+  background-color: #306bc1;
+  display: flex;
+  font-family: 'Aleo';
+  font-size: 51px;
+  height: 0;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.2s;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+
+.navbar-list {
+  padding: 0;
+  list-style-type: none;
+  height: auto;
+}
+
+.navbar-list li {
+  display: none;
+  opacity: 0;
+  text-align: right;
+  transition: all 0.2s;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-list li.active a,
+.navbar-list li:hover a {
+  color: black;
+}
+
+#navbar-trigger:checked ~ .navbar-list-container {
+  height: 100vh;
+  opacity: 1;
+  padding-top: 130px;
+}
+
+#navbar-trigger:checked ~ .navbar-list-container li {
+  display: block;
+  width: 100%;
+  opacity: 1;
+}
+
+#content {
+  margin-top: 130px;
 }
