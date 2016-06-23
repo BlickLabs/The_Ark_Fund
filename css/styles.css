@@ -564,3 +564,36 @@ html, body {
   height: 150px;
   resize: none;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 50px 0;
+  position: relative;
+}
+
+#mavericks-footer-logo {
+  left: 50%;
+  position: relative;
+}
+
+footer .max-width {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-media-icon {
+  color: white;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.social-media-name {
+  color: white;
+  font-size: 11px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
