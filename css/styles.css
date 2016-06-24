@@ -716,7 +716,8 @@ footer .max-width {
 
 @media screen and (max-width: 660px) {
   .homepage-investment-item {
-    width: 50%;
+    height: 60px;
+    width: 33%;
   }
 
   #homepage-cover-2 img {
