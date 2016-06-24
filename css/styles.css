@@ -131,6 +131,7 @@ html, body {
 }
 
 .cover  {
+  background-position: center;
   background-size: cover;
 }
 
@@ -142,7 +143,6 @@ html, body {
 
 #mavericks-navbar {
   background-color: white;
-  height: 115px;
   left: 0;
   position: fixed;
   top: 0;
@@ -156,7 +156,7 @@ html, body {
   background-repeat: no-repeat;
   display: inline-block;
   height: 115px;
-  margin: 10px 0 0 10px;
+  margin: 30px 0 0 30px;
   transition: background-image 0.2s;
   width: 160px;
 }
@@ -324,6 +324,7 @@ html, body {
 #homepage-divisor-4 {
   color: white;
   font-size: 25px;
+  padding-top: 0px;
 }
 
 #homepage-divisor-5 {
@@ -395,15 +396,18 @@ html, body {
 
 .homepage-diagram-row:nth-child(4) {
   margin-left: 50px;
-  margin-top: -280px;
+  margin-top: -290px;
 }
 
 .homepage-diagram-row:nth-child(4) .homepage-diagram-arrow {
-  transform: translate(-100%, 45px);
+  transform: translate(-120%, 30px);
 }
 
 #homepage-gray-section {
   background-color: #eee;
+  background-image: url('../img/fondo-gris-28.png');
+  background-position: center;
+  background-size: cover;
   height: auto !important;
 }
 
@@ -451,11 +455,11 @@ html, body {
 .homepage-investment-item {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: contain;
   display: inline-block;
-  height: 150px;
-  margin: 20px 1.5%;
-  width: 30%;
+  height: 100px;
+  margin: 30px 6%;
+  width: 20%;
 }
 
 #boletia-logo {
@@ -691,9 +695,7 @@ footer .max-width {
 
 @media screen and (max-width: 660px) {
   .homepage-investment-item {
-    height: 150px;
-    margin: 0;
-    width: 80%;
+    width: 50%;
   }
 
   #homepage-cover-2 img {
