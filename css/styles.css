@@ -152,13 +152,22 @@ html, body {
 
 #mavericks-logo {
   background-image: url('../img/icons/icons-03.png');
-  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-size: 100% auto;
   display: inline-block;
   height: 115px;
   margin: 30px 0 0 30px;
-  transition: background-image 0.2s;
+  transition: all 0.2s;
   width: 160px;
+}
+
+#mavericks-logo.hide-text {
+  height: 65px;
+  margin: 20px 20px 15px 20px;
+}
+
+#mavericks-logo.hide-text ~ #navbar-trigger-label {
+  margin-top: 38px;
 }
 
 #navbar-trigger:checked ~ #mavericks-logo {
@@ -178,6 +187,7 @@ html, body {
   margin-right: 50px;
   margin-top: 23px;
   position: relative;
+  transition: all 0.2s;
 }
 
 #navbar-trigger-label span {
@@ -224,12 +234,13 @@ html, body {
 
 .navbar-list-container {
   background-color: #306bc1;
-  display: flex;
+  display: block;
   font-size: 51px;
   height: 0;
   justify-content: center;
   left: 0;
   opacity: 0;
+  padding-top: 20px;
   position: fixed;
   top: 0;
   transition: opacity 0.2s;
@@ -264,13 +275,14 @@ html, body {
 #navbar-trigger:checked ~ .navbar-list-container {
   height: 100vh;
   opacity: 1;
-  padding-top: 130px;
 }
 
 #navbar-trigger:checked ~ .navbar-list-container li {
   display: block;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 300px;
   opacity: 1;
+  width: 80%;
 }
 
 .homepage-introduction {
@@ -539,12 +551,13 @@ html, body {
   width: 100%;
 }
 
-#contact-send {
+form #contact-send {
   background-color: #306bc1 !important;
   border: none !important;
   color: white !important;
   color: #306bc1;
   margin: 30px auto;
+  padding: 15px 0px;
   width: 35% !important;
 }
 
@@ -636,13 +649,13 @@ footer .max-width {
 
   .homepage-diagram-text {
     display: inline-block;
-    max-width: 600px;
+    max-width: 450px;
+    text-align: left !important;
     width: 100% !important;
   }
 
   .homepage-diagram-button {
-    display: inline-block;
-    width: 100%;
+    margin-left: 5px;
   }
 
   .homepage-diagram-arrow {
@@ -664,6 +677,14 @@ footer .max-width {
   }
 
   #mavericks-navbar {
+    text-align: left !important;
+  }
+
+  .navbar-list li {
+    text-align: right !important;
+  }
+
+  #form-container form *:not(#contact-send) {
     text-align: left !important;
   }
 
@@ -702,35 +723,147 @@ footer .max-width {
     height: auto;
     width: 100%;
   }
-
-  #homepage-divisor-4 {
-    padding-bottom: 0;
-    padding-top: 30px;
-  }
 }
 
 @media screen and (max-width: 500px) {
-  #homepage-cover-1 {
-    font-size: 30px;
+  #mavericks-logo {
+    height: 55px;
+    margin: 15px;
+    width: 80px;
   }
 
-  .homepage-divisor {
-    padding-left: 10px;
-    padding-right: 10px;
+  #mavericks-logo.hide-text {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  #mavericks-logo.hide-text ~ #navbar-trigger-label {
+    margin-top: 24px;
+  }
+
+  #navbar-trigger-label {
+    margin-right: 20px;
+  }
+
+  #navbar-trigger-label span{
+    height: 3px;
+    width: 30px;
+  }
+
+  .big-text {
+    font-size: 30px;
+    padding-bottom: 120px;
+  }
+  
+  .homepage-gray-divisor {
+    font-size: 20px;
+  }
+
+  .homepage-divisor:not(#homepage-divisor-4) {
+    padding: 50px 10px !important;
+  }
+
+  #homepage-divisor-1, #homepage-divisor-3 {
+    font-size: 24px;
+  }
+
+  #homepage-divisor-2 {
+    font-size: 21px;
+  }
+
+  .homepage-diagram-title {
+    font-size: 57.5px !important;
+  }
+
+  #homepage-divisor-4 {
+    font-size: 15px;
+  }
+
+  #homepage-divisor-5 {
+    font-size: 35px;
+  }
+
+  #homepage-cover-1 {
+    font-size: 28px;
+  }
+
+  .two-columns .white-container-title {
+    font-size: 33px;
+  }
+
+  .two-columns .learn-more {
+    margin-top: 40px;
+  }
+
+  #contact-send {
+    padding: 10px 0 !important;
+  }
+
+  .homepage-investment-item:nth-child(1) {
+    margin-top: -20px;
   }
 }
 
 /* HEIGHT BASED MEDIA QUERIES*/
 
-@media screen and (max-height: 710px) {
+@media screen and (max-height: 736px) {
   #homepage-cover-2 {
     height: auto;
+  }
+
+  #homepage-divisor-4 {
+    margin-top: 40px !important;
+    padding: 0 10px 40px 10px;
+  }
+
+  #homepage-cover-2 img {
+    margin-bottom: 30px !important;
   }
 }
 
 @media screen and (max-height: 640px) {
   .navbar-list-container {
     font-size: 30px;
+  }
+}
+
+@media screen and (max-height: 640px) and (orientation: portrait) {
+  .navbar-list-container {
+    font-size: 30px;
+  }
+
+  .navbar-list-container li {
+    max-width: 160px !important;
+  }
+}
+
+@media screen and (max-height: 640px) and (orientation: landscape) {
+  #mavericks-logo {
+    height: 55px;
+    margin: 15px;
+    width: 80px;
+  }
+
+  #mavericks-logo.hide-text {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  #mavericks-logo.hide-text ~ #navbar-trigger-label {
+    margin-top: 24px;
+  }
+
+  #navbar-trigger-label {
+    margin-right: 20px;
+  }
+
+  #navbar-trigger-label span{
+    height: 3px;
+    width: 30px;
+  }
+
+  .navbar-list-container li {
+    max-width: 120px !important;
   }
 }
 
