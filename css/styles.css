@@ -127,7 +127,7 @@ html, body {
 .vertical-center > * {
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
+  width: 98%;
 }
 
 .cover  {
@@ -833,7 +833,7 @@ footer .max-width {
   }
 
   .navbar-list-container li {
-    max-width: 160px !important;
+    max-width: 180px !important;
   }
 }
 

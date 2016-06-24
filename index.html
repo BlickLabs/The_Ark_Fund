@@ -186,5 +186,21 @@
 	  	<img id="mavericks-footer-logo" src="img/icons/iconss-19.png" />
 	  </footer>
 	</div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function (e) {
+      	if ($('#navbar-trigger').is(':checked')) {
+      		e.preventDefault();
+      	} else {
+      		if ($(window).scrollTop() > 100) {
+	          $('#mavericks-logo').addClass('hide-text')
+	        } else {
+	          $('#mavericks-logo').removeClass('hide-text')
+	        }
+      	}
+      });
+    });
+  </script>
 </body>
 </html>
