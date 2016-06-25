@@ -54,7 +54,8 @@
 
 #homepage-divisor-5,
 .common .contact-us,
-.portfolio .contact-us {
+.portfolio .contact-us,
+.team .contact-us {
   font-size: 58px;
 }
 

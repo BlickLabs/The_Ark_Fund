@@ -120,18 +120,24 @@
   max-width: 850px;
 }
 
-.common .contact-us {
+.common .contact-us, .team .contact-us {
   font-style: normal;
   padding: 100px 0 80px 0;
 }
 
-#portfolio-section-title {
+.portfolio .contact-us {
+  padding: 160px;
+}
+
+#portfolio-section-title,
+#team-section-title {
   margin-top: 50px;
   position: relative !important;
   transform: translate(-50%, 40%);
 }
 
-.portfolio.max-width {
+.portfolio.max-width,
+.team.max-width {
   max-width: 1100px;
 }
 
@@ -141,9 +147,115 @@
   margin-top: 70px;
   max-height: 600px;
   min-height: 600px;
+}
+
+.portfolio.max-width .white-container,
+.team.max-width .white-container {
   width: 100%;
 }
 
-.portfolio .contact-us {
-  padding: 160px;
+.team.max-width .white-container {
+  margin-top: 50px;
+  padding: 50px 30px 80px;
+}
+
+.team.light-gray-background {
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+.team-item {
+  margin: 0 auto;
+  max-width: 750px;
+  position: relative;
+  width: 90%;
+}
+
+.team-item-photo {
+  display: block;
+  width: 260px;
+}
+
+.team-item-data {
+  height: auto;
+  left: 360px;
+  right: 60px;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team-item:not(:last-child)::after {
+  border-color: #dfdfdf;
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  content: ' ';
+  display: block;
+  height: 50px;
+}
+
+.team-item-name,
+.team-item-description,
+.team-item-linkedin {
+  display: block;
+  padding-left: 50px;
+}
+
+.team-item-data hr {
+  border-color: #dfdfdf;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  margin: 10px 0 5px 0;
+}
+
+.team-item-name, .advisor-item-name {
+  font-size: 23px;
+}
+
+.team-item-description,
+.advisor-item-description {
+  font-family: 'Akzinenz Grotesk';
+  font-variant: small-caps;
+}
+
+.team-item-description {
+  font-size: 19px;
+}
+
+.team-advisors {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+  width: 90%;
+}
+
+.advisors-items {
+  margin-bottom: 50px;
+}
+
+.advisors-title {
+  font-size: 29px;
+  padding: 50px 0 40px 0;
+}
+
+.advisor-item {
+  display: inline-block;
+  margin: 0 55px 60px 55px;
+  width: 200px;
+}
+
+.advisor-item-photo {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+
+.advisor-item-name {
+  margin-top: 10px;
+}
+
+.advisor-item-description {
+  font-size: 14px;
 }
