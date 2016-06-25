@@ -34,7 +34,6 @@
 .section-title.fixed {
   position: fixed;
   top: 110px;
-  z-index: 12;
 }
 
 .section-title.bottom {

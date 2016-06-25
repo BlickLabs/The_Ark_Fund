@@ -2,14 +2,10 @@ $(document).ready(function () {
   var previousScroll = 0,
     initialTitleTop = $('.section-title').offset().top ? $('.section-title').offset().top : null;
   $(window).scroll(function (e) {
-    if ($('#navbar-trigger').is(':checked')) {
-      e.preventDefault();
+    if ($(window).scrollTop() > 70) {
+      $('#mavericks-logo').addClass('hide-text')
     } else {
-      if ($(window).scrollTop() > 70) {
-        $('#mavericks-logo').addClass('hide-text')
-      } else {
-        $('#mavericks-logo').removeClass('hide-text')
-      }
+      $('#mavericks-logo').removeClass('hide-text')
     }
 
     // Wave effect
