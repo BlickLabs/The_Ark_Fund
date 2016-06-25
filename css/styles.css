@@ -523,9 +523,17 @@ html, body {
 }
 
 #form-section {
-  background-image: url('../img/icons/icons-19.png');
-  background-position: -10px 100%;
-  background-repeat: no-repeat;
+  position: relative;
+}
+
+#form-section::before {
+  bottom: -5px;
+  content: url('../img/icons/icons-19.png');
+  display: block;
+  left: -10px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 #form-container {
