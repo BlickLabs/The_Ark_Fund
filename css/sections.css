@@ -224,6 +224,10 @@
   font-size: 19px;
 }
 
+.team-item-linkedin {
+  display: inline-block;
+}
+
 .team-advisors {
   margin: 0 auto;
   max-width: 1000px;
