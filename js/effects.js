@@ -29,13 +29,13 @@ $(document).ready(function () {
       navbarHeight = null;
 
     if ($('.section-title').length > 0) {
-      // console.log($('.section-title')[0]);
       coverHeight = $('.sections-cover-container .cover').outerHeight();
       coverTop = $('.sections-cover-container .cover').offset().top;
       titleTop = $('.section-title').offset().top;
       titleHeight = $('.section-title').outerHeight();
       navbarHeight = $('#mavericks-navbar').outerHeight();
 
+      //Move title
       if (scroll > previousScroll && scroll > 110) {
         if (!$('.section-title').hasClass('fixed')
            && !$('.section-title').hasClass('bottom')) {
@@ -58,6 +58,19 @@ $(document).ready(function () {
       else if (scroll < previousScroll && scroll < 110) {
         $('.section-title').removeClass('fixed');
       }
+
+      // Change image color
+      if (scroll > previousScroll &&
+         scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
+         !$('.sections-cover-container .cover').hasClass('color')) {
+        $('.sections-cover-container .cover').addClass('color');
+      }
+      else if (scroll < previousScroll &&
+         scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
+         $('.sections-cover-container .cover').hasClass('color')) {
+        $('.sections-cover-container .cover').removeClass('color');
+      }
+
     }
 
     // Set previous scroll
