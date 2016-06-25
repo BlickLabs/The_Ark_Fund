@@ -1,0 +1,125 @@
+
+#modal-trigger {
+  display: none;
+}
+
+#modal-trigger-label {
+  background-color: #306bc1;
+  border: none;
+  color: white;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 16px;
+  margin-top: 50px;
+  outline: none;
+  padding: 15px 40px;
+}
+
+#modal-trigger:checked ~ #modal-trigger-label {
+  background-color: black !important;
+}
+
+#modal-destroyer-label {
+  cursor: pointer;
+  cursor: hand;
+  display: block;
+  right: 0;
+  margin-right: 30px;
+  position: fixed;
+  text-align: right !important;
+  top: 0;
+}
+
+#modal-destroyer-label span {
+  display: inline-block;
+  height: 0px;
+  transition: all 0.2s ease-in-out;
+  width: 50px;
+}
+
+#modal-destroyer-label span:nth-child(1) {
+  background-color: black;
+}
+
+#modal-destroyer-label span:nth-child(2) {
+  background-color: white;
+  margin-left: -63px;
+  /*float: left;*/
+}
+
+#modal-trigger:checked ~ #contact-modal label span {
+  height: 4px;
+}
+
+#modal-trigger:checked ~ #contact-modal label span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+#modal-trigger:checked ~ #contact-modal label span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+#contact-modal {
+  background-color: #306bc1;
+  color: white;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#modal-trigger:checked ~ #contact-modal {
+  opacity: 1;
+  z-index: 12;
+}
+
+#contact-modal .form-title {
+  font-size: 66px;
+}
+
+#contact-modal form * {
+  background-color: transparent;
+  border: 2px white solid;
+  color: white;
+  display: block;
+  font-family: 'Akzidenz Grotesk';
+  font-size: 16px;
+  margin: 15px auto 0 auto;
+  max-width: 350px;
+  padding: 15px 25px;
+  width: 80%;
+}
+
+#contact-modal form #contact-send {
+  background-color: white !important;
+  border: none !important;
+  color: #306bc1 !important;
+  margin: 30px auto;
+  padding: 15px 0px;
+  width: 140px !important;
+}
+
+#contact-modal form *,
+#contact-modal form *:focus,
+#contact-modal form *:active {
+  outline: none;
+}
+
+#contact-modal form *::-moz-placeholder {
+  color: white;
+}
+
+#contact-modal form *::-webkit-input-placeholder {
+  color: white;
+}
+
+#contact-modal form *:-ms-input-placeholder {
+  color: white;
+}
+
+#contact-modal form *:-moz-placeholder {
+  color: white;
+}
