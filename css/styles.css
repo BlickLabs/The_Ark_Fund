@@ -50,6 +50,10 @@ html, body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 #content {
   padding-top: 115px;
 }
@@ -670,6 +674,35 @@ form #contact-send {
   background-image: url('../img/foto-10.jpg');
 }
 
+.about-us-description {
+  padding: 100px 0 80px 0;
+}
+
+.about-us-description.gray-background {
+  padding-bottom: 120px;
+}
+
+.about-us-description.max-width,
+.about-us-description.gray-background .max-width {
+  width: 80%;
+}
+
+.about-us-description.max-width {
+  max-width: 775px;
+}
+
+.about-us-description.gray-background .max-width {
+  max-width: 810px;
+}
+
+.about-us-description p {
+  font-size: 25px;
+  line-height: 220%;
+}
+
+.about-us-description p:not(:nth-child(1)) {
+  padding-top: 60px;
+}
 
 footer {
   background-color: black;
