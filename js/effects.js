@@ -24,7 +24,7 @@ $(document).ready(function () {
       titleHeight = null,
       navbarHeight = null;
 
-    if ($('.section-title').length > 0) {
+    if ($('.sections-cover-container .section-title').length > 0) {
       coverHeight = $('.sections-cover-container .cover').outerHeight();
       coverTop = $('.sections-cover-container .cover').offset().top;
       titleTop = $('.section-title').offset().top;
