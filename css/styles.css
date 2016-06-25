@@ -84,7 +84,7 @@ html, body {
 
 #overflow-container {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 .full-vh-container {
@@ -527,13 +527,38 @@ html, body {
 }
 
 #form-section::before {
-  bottom: -5px;
-  content: url('../img/icons/icons-19.png');
+  background-image: url('../img/icons/icons-19.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  bottom: -15px;
+  content: ' ';
   display: block;
+  height: 409px;
   left: -10px;
+  opacity: 0;
   position: absolute;
-  width: 100%;
+  text-align: left !important;
+  transform: translate(-30%, -30%) rotate(-45deg);
   z-index: -1;
+  width: 442px;
+}
+
+#form-section.animate-wave::before {
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-name: wave;
+}
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+    transform: translate(-30%, 30%) rotate(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0) rotate(0);
+  }
 }
 
 #form-container {
@@ -810,6 +835,11 @@ footer .max-width {
 
   .homepage-investment-item:nth-child(1) {
     margin-top: -20px;
+  }
+
+  #form-section::before {
+    height: 205px;
+    width: 221px;
   }
 }
 
