@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var previousScroll = 0,
-    initialTitleTop = $('.section-title').offset().top ? $('.section-title').offset().top : null;
+    initialTitleTop = $('.section-title').length ? $('.section-title').offset().top : null;
   $(window).scroll(function (e) {
     if ($(window).scrollTop() > 70) {
       $('#mavericks-logo').addClass('hide-text')
