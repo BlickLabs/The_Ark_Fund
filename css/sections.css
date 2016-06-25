@@ -42,8 +42,29 @@
   transform: translate(-50%, 0);
 }
 
+#startups-section-title.bottom,
+#startups-section-title.bottom span {
+  color: white;
+}
+
+#about-section-title.bottom,
+#angels-section-title.bottom,
+#about-section-title.bottom span,
+#angels-section-title.bottom span {
+  color: black;
+}
+
+
 #about-us-cover {
   background-image: url('../img/foto-10.jpg');
+}
+
+#startups-cover {
+  background-image: url('../img/foto-13.jpg');
+}
+
+#angels-cover {
+  background-image: url('../img/foto-15.jpg');
 }
 
 .about-us-description {
