@@ -119,8 +119,10 @@
   transition: all 0.2s;
 }
 
-.navbar-list li a {
+.navbar-list li a,
+.navbar-list li label {
   color: white;
+  font-weight: normal;
   text-decoration: none;
 }
 
