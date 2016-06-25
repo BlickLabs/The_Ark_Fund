@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mavericks</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="overflow-container">
+    <nav id="mavericks-navbar">
+      <input type="checkbox" id="navbar-trigger" />
+      <div id="mavericks-logo"> </div>
+      <label id="navbar-trigger-label" for="navbar-trigger">
+        <span> </span>
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </label>
+      <div class="navbar-list-container">
+        <ul class="navbar-list">
+          <li><a href="#">Home</a></li>
+          <li class="active"><a href="#">About us</a></li>
+          <li><a href="#">For Startups</a></li>
+          <li><a href="#">For Angels</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="content">
+      <div class="sections-cover-container">
+        <h2 class="section-title">For <span class="blue-text">Startups</span>.</h2>
+        <div id="about-us-cover" class="cover full-height"> </div>
+      </div>
+      <div class="light-gray-background italic">
+        <div class="max-width text-center common">
+          <div class="divisor">
+            What do you want to leave behind? <br>
+            The <span class="blue-text">truth of who you really are</span>, or just some words on a deck?
+          </div>
+          <div class="white-container">
+            <ol class="colored-list">
+              <li>
+              <span class="black-text regular">Whe create positive</span> network effects <span class="black-text regular">to accelerate your business growth.</span>
+              </li>
+              <li>
+                <span class="black-text regular">We offer a network of connected skills and</span> knowledge <span class="black-text regular">to our entrepreneurs when needed.</span>
+              </li>
+              <li>
+                <span class="black-text regular">We help our founders navigate the choppy waters of</span> follow-on fundraising.
+              </li>
+              <li>
+                <span class="black-text regular">We provide a</span> dedicated teams <span class="black-text regular">that adds value to your business: <br>
+                designers, hackers, business developers, marketing experts.</span>
+              </li>
+            </ol>
+          </div>
+          <div class="contact-us">
+            <input type="checkbox" id="modal-trigger"/>
+            <div>Be a Maverick. <span class="blue-text">Talk to us</span>.</div>
+            <label id="modal-trigger-label" for="modal-trigger" type="button">Contact us</label>
+            <div id="contact-modal" class="vertical-center">
+              <div>
+                <label id="modal-destroyer-label" for="modal-trigger">
+                  <span></span>
+                  <span></span>
+                </label>
+                <div>
+                  <div class="form-title">
+                    <span class="black-text">Be a Maverick.</span> Talk to us<span class="black-text">.</span>
+                  </div>
+                </div>
+                <form action="">
+                  <input type="text" id="contact-name" name="contact-name" placeholder="Name" />
+                  <input type="email" id="contact-email" name="contact-email" placeholder="Email" />
+                  <select id="contact-type" name="contact-type">
+                    <option value="startup">Startup</option>
+                    <option value="angel">Angel Investor</option>
+                  </select>
+                  <textarea id="contact-message" name="contact-message" placeholder="Message"></textarea>
+                  <button type="button" id="contact-send" name="contact-send">Send</button>
+                </form>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="max-width">
+        Follow us:
+        <div class="footer-social-media akzidenz">
+          <a href="#">
+            <span class="fa fa-twitter social-media-icon"></span>
+            <span class="social-media-name">@mavericksMX</span>
+          </a>
+          <a href="#">
+            <span class="fa fa-facebook-square social-media-icon"></span>
+            <span class="social-media-name">/mavericksMX</span>
+          </a>
+        </div>
+      </div>
+      <img id="mavericks-footer-logo" src="img/icons/iconss-19.png" />
+    </footer>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>
