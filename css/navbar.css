@@ -122,6 +122,8 @@
 .navbar-list li a,
 .navbar-list li label {
   color: white;
+  cursor: pointer;
+  cursor: hand;
   font-weight: normal;
   text-decoration: none;
 }
