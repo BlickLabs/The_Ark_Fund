@@ -74,8 +74,8 @@ $(document).ready(function () {
             }
           }
           if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
-            !$('.sections-cover-container').hasClass('color')) {
-            $('.sections-cover-container').addClass('color');
+            !$('.sections-cover-container').hasClass('colour')) {
+            $('.sections-cover-container').addClass('colour');
           }
         } else {
           if (scroll < scrollBottomLimit) {
@@ -86,8 +86,8 @@ $(document).ready(function () {
             }
           }
           if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
-             $('.sections-cover-container').hasClass('color')) {
-            $('.sections-cover-container').removeClass('color');
+             $('.sections-cover-container').hasClass('colour')) {
+            $('.sections-cover-container').removeClass('colour');
           }
         }
       } else {
@@ -99,12 +99,12 @@ $(document).ready(function () {
           }
         }
         if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
-          !$('.sections-cover-container').hasClass('color')) {
-          $('.sections-cover-container').addClass('color');
+          !$('.sections-cover-container').hasClass('colour')) {
+          $('.sections-cover-container').addClass('colour');
         }
         else if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
-           $('.sections-cover-container').hasClass('color')) {
-          $('.sections-cover-container').removeClass('color');
+           $('.sections-cover-container').hasClass('colour')) {
+          $('.sections-cover-container').removeClass('colour');
         }
       }
     }
