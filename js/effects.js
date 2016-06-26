@@ -22,51 +22,91 @@ $(document).ready(function () {
       coverTop = null,
       titleTop = null,
       titleHeight = null,
-      navbarHeight = null;
+      navbarHeight = null,
+      scrollIs = null,
+      adjustTitleBottom = null,
+      adjustTitleTop = null,
+      dirtyPreviousScroll = null,
+      moveTitle = null,
+      scrollTopLimit = null,
+      scrollBottomLimit = null;
 
     if ($('.sections-cover-container .section-title').length > 0) {
       coverHeight = $('.sections-cover-container .cover').outerHeight();
       coverTop = $('.sections-cover-container .cover').offset().top;
-      titleTop = $('.section-title').offset().top;
+      titleTop = parseFloat($('.section-title').css('top'));
       titleHeight = $('.section-title').outerHeight();
       navbarHeight = $('#mavericks-navbar').outerHeight();
 
-      //Move title
-      if (scroll > previousScroll && scroll > 110) {
-        if (!$('.section-title').hasClass('fixed')
-           && !$('.section-title').hasClass('bottom')) {
-          $('.section-title').addClass('fixed');
+      //Move title code
+      scrollTopLimit = initialTitleTop - navbarHeight;
+      scrollBottomLimit = coverHeight + coverTop - titleHeight - navbarHeight;
+      scrollIs = function (direction) {
+        var scrollDir = scroll > previousScroll ? 'down' : 'top';
+        return scrollDir == direction;
+      };
+      dirtyPreviousScroll = function () {
+        return previousScroll != 0;
+      };
+      moveTitle = function (direction) {
+        $('.section-title').css('top', 
+          parseInt($('.section-title').css('top')) + 1.5*(scroll - previousScroll)
+        );
+      };
+      adjustTitleBottom = function () {
+        $('.section-title').css('top', 
+          $('.sections-cover-container').outerHeight()
+          - titleHeight/2
+        );
+      };
+      adjustTitleTop = function () {
+        $('.section-title').css('top', 0);
+      };
+      if (dirtyPreviousScroll()) {
+        if (scrollIs('down')) {
+          if (scroll > scrollTopLimit) {
+            if (titleTop < $('.sections-cover-container').outerHeight()
+          - titleHeight/2) {
+              moveTitle();
+            } else if (titleTop > $('.sections-cover-container').outerHeight()
+          - titleHeight/2) {
+              adjustTitleBottom();
+            }
+          }
+          if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
+            !$('.sections-cover-container').hasClass('color')) {
+            $('.sections-cover-container').addClass('color');
+          }
+        } else {
+          if (scroll < scrollBottomLimit) {
+            if (titleTop > 0) {
+              moveTitle();
+            } else if (titleTop < 0) {
+              adjustTitleTop();
+            }
+          }
+          if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
+             $('.sections-cover-container').hasClass('color')) {
+            $('.sections-cover-container').removeClass('color');
+          }
         }
-        else if (scroll >= coverTop + coverHeight - navbarHeight - titleHeight/2
-          && !$('.section-title').hasClass('bottom')) {
-          $('.section-title').removeClass('fixed');
-          $('.section-title').addClass('bottom');
+      } else {
+        if (scroll >= scrollTopLimit) {
+          moveTitle();
+          if (parseFloat($('.section-title').css('top')) > $('.sections-cover-container').outerHeight()
+          - titleHeight/2 || scroll >= scrollBottomLimit) {
+            adjustTitleBottom();
+          }
+        }
+        if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
+          !$('.sections-cover-container').hasClass('color')) {
+          $('.sections-cover-container').addClass('color');
+        }
+        else if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
+           $('.sections-cover-container').hasClass('color')) {
+          $('.sections-cover-container').removeClass('color');
         }
       }
-      else if (scroll < previousScroll &&
-          scroll <= coverTop + coverHeight - navbarHeight - titleHeight/2
-          && scroll > 110) {
-        if ($('.section-title').hasClass('bottom')) {
-          $('.section-title').removeClass('bottom');
-          $('.section-title').addClass('fixed');
-        }
-      }
-      else if (scroll < previousScroll && scroll < 110) {
-        $('.section-title').removeClass('fixed');
-      }
-
-      // Change image color
-      if (scroll > previousScroll &&
-         scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
-         !$('.sections-cover-container .cover').hasClass('color')) {
-        $('.sections-cover-container .cover').addClass('color');
-      }
-      else if (scroll < previousScroll &&
-         scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
-         $('.sections-cover-container .cover').hasClass('color')) {
-        $('.sections-cover-container .cover').removeClass('color');
-      }
-
     }
 
     // Set previous scroll

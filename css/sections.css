@@ -14,11 +14,21 @@
   z-index: -1;
 }
 
-.sections-cover-container .cover.color {
+.sections-cover-container.color .cover {
   -moz-filter: none;
   -o-filter: none;
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+
+.sections-cover-container.color #about-section-title span,
+.sections-cover-container.color #angels-section-title span {
+  color: black;
+}
+
+.sections-cover-container.color #startups-section-title,
+.sections-cover-container.color #startups-section-title span {
+  color: white;
 }
 
 .section-title {
@@ -31,15 +41,14 @@
   transform: translate(-50%, -50%);
 }
 
+.section-title,
+.section-title span {
+  transition: color 0.2s;
+}
+
 .section-title.fixed {
   position: fixed;
   top: 110px;
-}
-
-.section-title.bottom {
-  bottom: 0;
-  position: absolute;
-  transform: translate(-50%, 0);
 }
 
 #startups-section-title.bottom,
