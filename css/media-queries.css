@@ -52,6 +52,21 @@
     text-align: center !important;
   }
 
+  .common .white-container {
+    padding: 80px 0;
+  }
+
+  .common .white-container ol {
+    left: -10px;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+  }
+
+  .common .white-container * {
+    text-align: justify !important;
+  }
+
   #mavericks-navbar {
     text-align: left !important;
   }
@@ -60,7 +75,8 @@
     text-align: right !important;
   }
 
-  #form-container form *:not(#contact-send) {
+  #form-container form *:not(#homepage-contact-send),
+  #contact-modal form *:not(#contact-send) {
     text-align: left !important;
   }
 
@@ -71,11 +87,21 @@
     width: 90%;
   }
 
+  .portfolio .contact-us {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 80%;
+  }
+
   #mavericks-footer-logo {
     display: inline-block;
     left: 0;
     margin-top: 30px;
     transform: none;
+  }
+
+  #contact-modal .form-title {
+    font-size: 40px;
   }
 
   footer .max-width {
@@ -90,6 +116,34 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .team-item::after {
+    border: none !important;
+  }
+
+  .team-item-photo {
+    margin: 0 auto;
+    max-width: 280px;
+    width: 90%;
+  }
+
+  .team-item-data {
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .team-item-data * {
+    padding: 0;
+  }
+
+  .advisor-item {
+    margin: 0 20px 50px 20px;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .homepage-investment-item {
     height: 60px;
@@ -100,9 +154,6 @@
     height: auto;
     width: 100%;
   }
-}
-
-@media screen and (max-width: 500px) {
   #mavericks-logo {
     height: 55px;
     margin: 15px;
@@ -156,7 +207,10 @@
     font-size: 15px;
   }
 
-  #homepage-divisor-5 {
+  #homepage-divisor-5,
+  .common .contact-us,
+  .portfolio .contact-us,
+  .team .contact-us {
     font-size: 35px;
   }
 
@@ -184,28 +238,111 @@
     height: 205px;
     width: 221px;
   }
+
+  .section-title {
+    font-size: 35px;
+  }
+
+  .contact-us {
+    margin: 0 auto;
+    padding: 60px 0 !important;
+    width: 85%;
+  }
+
+  .common .divisor {
+    font-size: 19px;
+    padding: 50px 0;
+  }
+
+  .common .white-container {
+    font-size: 15px;
+    padding: 30px 0;
+  }
+
+  .common .white-container ol {
+    left: -15px;
+  }
+
+  .gray-background.about-us-description {
+    padding-bottom: 70px;
+  }
+  
+  .about-us-description {
+    padding: 60px 0;
+  }
+
+  .about-us-description p {
+    font-size: 18px;
+  }
+
+  .about-us-description p:not(:nth-child(1)) {
+    padding-top: 30px;
+  }
+
+  .sections-cover-container {
+    margin-top: 20px;
+  }
+
+  #portfolio-section-title,
+  #team-section-title {
+    margin-top: 0;
+  }
+
+  .portfolio .white-container {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-height: 560px) {
+  #contact-modal .form-title {
+    font-size: 30px;
+  }
 }
 
 /* HEIGHT BASED MEDIA QUERIES*/
 
 @media screen and (max-height: 736px) {
   #homepage-cover-2 {
-    height: auto;
+    height: auto !important;
+  }
+
+  #homepage-cover-2 .max-width {
+    transform: none;
   }
 
   #homepage-divisor-4 {
-    margin-top: 40px !important;
-    padding: 0 10px 40px 10px;
+    padding: 40px 10px;
   }
 
   #homepage-cover-2 img {
     margin-bottom: 30px !important;
   }
-}
 
+  .portfolio .white-container {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .portfolio .white-container span {
+    margin: 120px auto;
+    top: 0;
+    transform: none;
+    width: 85%;
+  }
+}
 @media screen and (max-height: 640px) {
   .navbar-list-container {
     font-size: 30px;
+  }
+  
+  #contact-modal > div {
+    top: 0;
+    transform: none;
+  }
+
+  #contact-modal .form-title {
+    margin-bottom: 0;
+    margin-top: 80px;
   }
 }
 

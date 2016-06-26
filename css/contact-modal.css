@@ -71,9 +71,15 @@
   z-index: 12;
 }
 
+#contact-modal > div {
+  max-width: 450px;
+  width: 80%;
+}
+
 #modal-trigger:checked ~ #contact-modal {
   height: 100vh;
   opacity: 1;
+  overflow: auto;
 }
 
 #contact-modal .form-title {
