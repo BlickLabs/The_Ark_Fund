@@ -132,7 +132,8 @@
 }
 
 .navbar-list li.active a,
-.navbar-list li:hover a {
+.navbar-list li:hover a,
+.navbar-list li:hover label {
   color: black;
 }
 
