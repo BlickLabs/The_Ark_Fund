@@ -20,7 +20,7 @@ $(document).ready(function () {
     var footerHeight = $('footer').outerHeight(),
       footerTop = $('footer').offset().top,
       contactFormBeforeHeight = parseInt(window.getComputedStyle(
-        document.querySelector('footer'), ':before'
+        document.querySelector('#form-section'), ':before'
       ).getPropertyValue('height')),
       trigger = scroll + windowHeight - contactFormBeforeHeight/2;
     if (trigger >= footerTop - contactFormBeforeHeight) {
