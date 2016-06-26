@@ -18,8 +18,12 @@ $(document).ready(function () {
 
   animateWave = function () {
     var footerHeight = $('footer').outerHeight(),
-      footerTop = $('footer').offset().top;
-    if ((parseInt(footerTop - scroll) - windowHeight - footerHeight <= footerHeight)) {
+      footerTop = $('footer').offset().top,
+      contactFormBeforeHeight = parseInt(window.getComputedStyle(
+        document.querySelector('footer'), ':before'
+      ).getPropertyValue('height')),
+      trigger = scroll + windowHeight - contactFormBeforeHeight/2;
+    if (trigger >= footerTop - contactFormBeforeHeight) {
       $('#form-section').addClass('animate-wave');
     } else {
       $('#form-section').removeClass('animate-wave');
