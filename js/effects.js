@@ -1,100 +1,96 @@
 $(document).ready(function () {
   var previousScroll = 0,
-    initialTitleTop = $('.section-title').length ? $('.section-title').offset().top : null;
-  $(window).scroll(function (e) {
-    if ($(window).scrollTop() > 70) {
+    initialTitleTop = $('.section-title').length ? $('.section-title').offset().top : null,
+    scroll = $(window).scrollTop(),
+    windowHeight = $(window).outerHeight(),
+    animateNavbar = null,
+    animateWave = null,
+    animateTitle = null,
+    animateAdvisors = null;
+
+  animateNavbar = function () {
+    if (scroll > 70) {
       $('#mavericks-logo').addClass('hide-text')
     } else {
       $('#mavericks-logo').removeClass('hide-text')
     }
+  };
 
-    // Wave effect
+  animateWave = function () {
     var footerHeight = $('footer').outerHeight(),
-      windowHeight = window.innerHeight,
-      scroll = $(window).scrollTop(),
       footerTop = $('footer').offset().top;
-    if ((parseInt(footerTop - scroll) - windowHeight - footerHeight <= footerHeight) && !$('#form-section').hasClass('animate-wave')) {
+    if ((parseInt(footerTop - scroll) - windowHeight - footerHeight <= footerHeight)) {
       $('#form-section').addClass('animate-wave');
+    } else {
+      $('#form-section').removeClass('animate-wave');
     }
+  };
 
-    // Sections' titles effect
+  animateTitle = function (pristineScroll) {
     var coverHeight = null,
-      coverTop = null,
-      titleTop = null,
-      titleHeight = null,
-      navbarHeight = null,
-      scrollIs = null,
-      adjustTitleBottom = null,
-      adjustTitleTop = null,
-      dirtyPreviousScroll = null,
-      moveTitle = null,
-      scrollTopLimit = null,
-      scrollBottomLimit = null;
+    coverTop = null,
+    titleTop = null,
+    titleHeight = null,
+    navbarHeight = null,
+    scrollIs = null,
+    moveTitle = null,
+    adjustTitleBottom = null,
+    adjustTitleTop = null,
+    scrollBottomLimit = null,
+    scrollTopLimit = null;
 
-    if ($('.sections-cover-container .section-title').length > 0) {
-      coverHeight = $('.sections-cover-container .cover').outerHeight();
-      coverTop = $('.sections-cover-container .cover').offset().top;
-      titleTop = parseFloat($('.section-title').css('top'));
-      titleHeight = $('.section-title').outerHeight();
-      navbarHeight = $('#mavericks-navbar').outerHeight();
+    coverHeight = $('.sections-cover-container .cover').outerHeight();
+    coverTop = $('.sections-cover-container .cover').offset().top;
+    titleTop = parseFloat($('.section-title').css('top'));
+    titleHeight = $('.section-title').outerHeight();
+    navbarHeight = $('#mavericks-navbar').outerHeight();
+    scrollTopLimit = initialTitleTop - navbarHeight;
+    scrollBottomLimit = coverHeight + coverTop - titleHeight - navbarHeight;
 
-      //Move title code
-      scrollTopLimit = initialTitleTop - navbarHeight;
-      scrollBottomLimit = coverHeight + coverTop - titleHeight - navbarHeight;
-      scrollIs = function (direction) {
-        var scrollDir = scroll > previousScroll ? 'down' : 'top';
-        return scrollDir == direction;
-      };
-      dirtyPreviousScroll = function () {
-        return previousScroll != 0;
-      };
-      moveTitle = function (direction) {
-        $('.section-title').css('top', 
-          parseInt($('.section-title').css('top')) + 1.5*(scroll - previousScroll)
-        );
-      };
-      adjustTitleBottom = function () {
-        $('.section-title').css('top', 
-          $('.sections-cover-container').outerHeight()
-          - titleHeight/2
-        );
-      };
-      adjustTitleTop = function () {
-        $('.section-title').css('top', 0);
-      };
-      if (dirtyPreviousScroll()) {
-        if (scrollIs('down')) {
-          if (scroll > scrollTopLimit) {
-            if (titleTop < $('.sections-cover-container').outerHeight()
-          - titleHeight/2) {
-              moveTitle();
-            } else if (titleTop > $('.sections-cover-container').outerHeight()
-          - titleHeight/2) {
-              adjustTitleBottom();
-            }
-          }
-          if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
-            !$('.sections-cover-container').hasClass('colour')) {
-            $('.sections-cover-container').addClass('colour');
-          }
-        } else {
-          if (scroll < scrollBottomLimit) {
-            if (titleTop > 0) {
-              moveTitle();
-            } else if (titleTop < 0) {
-              adjustTitleTop();
-            }
-          }
-          if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
-             $('.sections-cover-container').hasClass('colour')) {
-            $('.sections-cover-container').removeClass('colour');
-          }
+    scrollIs = function (direction) {
+      var scrollDir = scroll > previousScroll ? 'down' : 'top';
+      return scrollDir == direction;
+    };
+
+    moveTitle = function (direction) {
+      $('.section-title').css('top', 
+        parseInt($('.section-title').css('top')) + 1.5*(scroll - previousScroll)
+      );
+    };
+    adjustTitleBottom = function () {
+      $('.section-title').css('top', 
+        $('.sections-cover-container').outerHeight()
+        - titleHeight/2
+      );
+    };
+    adjustTitleTop = function () {
+      $('.section-title').css('top', 0);
+    };
+
+    if (pristineScroll) {
+      if (scroll >= scrollTopLimit) {
+        moveTitle();
+        if (parseFloat($('.section-title').css('top')) > $('.sections-cover-container').outerHeight()
+        - titleHeight/2 || scroll >= scrollBottomLimit) {
+          adjustTitleBottom();
         }
-      } else {
-        if (scroll >= scrollTopLimit) {
-          moveTitle();
-          if (parseFloat($('.section-title').css('top')) > $('.sections-cover-container').outerHeight()
-          - titleHeight/2 || scroll >= scrollBottomLimit) {
+      }
+      if (scroll > coverTop + coverHeight/2 - 2*navbarHeight &&
+        !$('.sections-cover-container').hasClass('colour')) {
+        $('.sections-cover-container').addClass('colour');
+      }
+      else if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
+         $('.sections-cover-container').hasClass('colour')) {
+        $('.sections-cover-container').removeClass('colour');
+      }
+    } else {
+      if (scrollIs('down')) {
+        if (scroll > scrollTopLimit) {
+          if (titleTop < $('.sections-cover-container').outerHeight()
+        - titleHeight/2) {
+            moveTitle();
+          } else if (titleTop > $('.sections-cover-container').outerHeight()
+        - titleHeight/2) {
             adjustTitleBottom();
           }
         }
@@ -102,42 +98,60 @@ $(document).ready(function () {
           !$('.sections-cover-container').hasClass('colour')) {
           $('.sections-cover-container').addClass('colour');
         }
-        else if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
+      } else {
+        if (scroll < scrollBottomLimit) {
+          if (titleTop > 0) {
+            moveTitle();
+          } else if (titleTop < 0) {
+            adjustTitleTop();
+          }
+        }
+        if (scroll < coverTop + coverHeight/2 - 2*navbarHeight &&
            $('.sections-cover-container').hasClass('colour')) {
           $('.sections-cover-container').removeClass('colour');
         }
       }
     }
-    
-    if($('.advisor-item').length > 0) {
-      var advisors = $('.advisor-item').toArray();
-      advisors.forEach(function (elem, index) {
-        var _elem = $(elem),
-          top = _elem.offset().top,
-          height = _elem.height(),
-          trigger = scroll + $(window).outerHeight() - height/2;
-        if (trigger >= top) {
-         _elem.addClass('show');
-        } else {
-         _elem.removeClass('show');
-        }
-      });
-    }
-    // Set previous scroll
-    previousScroll = scroll;
-  });
-  if($('.advisor-item').length > 0) {
+  };
+
+  animateAdvisors = function() {
     var advisors = $('.advisor-item').toArray();
     advisors.forEach(function (elem, index) {
       var _elem = $(elem),
         top = _elem.offset().top,
         height = _elem.height(),
-        trigger = $(window).scrollTop() + $(window).outerHeight() - height/2;
+        trigger = scroll + windowHeight - height/2;
       if (trigger >= top) {
        _elem.addClass('show');
       } else {
        _elem.removeClass('show');
       }
     });
+  };
+
+  // Animations
+  animateNavbar();
+  animateWave();
+  if ($('.sections-cover-container .section-title').length > 0) {
+    animateTitle(true);
   }
+  if ($('.advisor-item').length > 0) {
+    animateAdvisors();
+  }
+
+
+  $(window).scroll(function (e) {
+    scroll = $(window).scrollTop();
+
+    animateNavbar();
+    animateWave();
+    if ($('.sections-cover-container .section-title').length > 0) {
+      animateTitle(false);
+    }
+    if ($('.advisor-item').length > 0) {
+      animateAdvisors();
+    }
+
+    previousScroll = scroll;
+  });
 });
