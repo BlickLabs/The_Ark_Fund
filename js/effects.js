@@ -108,8 +108,36 @@ $(document).ready(function () {
         }
       }
     }
-
+    
+    if($('.advisor-item').length > 0) {
+      var advisors = $('.advisor-item').toArray();
+      advisors.forEach(function (elem, index) {
+        var _elem = $(elem),
+          top = _elem.offset().top,
+          height = _elem.height(),
+          trigger = scroll + $(window).outerHeight() - height/2;
+        if (trigger >= top) {
+         _elem.addClass('show');
+        } else {
+         _elem.removeClass('show');
+        }
+      });
+    }
     // Set previous scroll
     previousScroll = scroll;
   });
+  if($('.advisor-item').length > 0) {
+    var advisors = $('.advisor-item').toArray();
+    advisors.forEach(function (elem, index) {
+      var _elem = $(elem),
+        top = _elem.offset().top,
+        height = _elem.height(),
+        trigger = $(window).scrollTop() + $(window).outerHeight() - height/2;
+      if (trigger >= top) {
+       _elem.addClass('show');
+      } else {
+       _elem.removeClass('show');
+      }
+    });
+  }
 });
