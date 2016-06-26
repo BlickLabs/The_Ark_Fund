@@ -23,18 +23,18 @@
   cursor: pointer;
   cursor: hand;
   display: block;
-  margin-right: 30px;
-  margin-top: -110px;
+  height: 38px;
   position: absolute;
   right: 0;
-  text-align: right !important;
   top: 0;
+  transform: translate(-100%, 150%);
+  width: auto;
 }
 
 #modal-destroyer-label span {
-  display: inline-block;
-  height: 0px;
-  transition: all 0.2s ease-in-out;
+  display: block;
+  height: 0;
+  transition: all 0.2s;
   width: 50px;
 }
 
@@ -44,37 +44,36 @@
 
 #modal-destroyer-label span:nth-child(2) {
   background-color: white;
-  margin-left: -63px;
-  /*float: left;*/
-}
-
-#modal-trigger:checked ~ #contact-modal label span {
-  height: 4px;
+  margin-top: -4px;
 }
 
 #modal-trigger:checked ~ #contact-modal label span:nth-child(1) {
+  height: 4px;
   transform: rotate(45deg);
 }
 
 #modal-trigger:checked ~ #contact-modal label span:nth-child(2) {
+  height: 4px;
   transform: rotate(-45deg);
 }
 
 #contact-modal {
   background-color: #306bc1;
   color: white;
-  height: 100%;
+  height: 0;
   left: 0;
   opacity: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: -1;
+  transition: all 0.2s;
+  width: 100vw;
+  z-index: 12;
 }
 
 #modal-trigger:checked ~ #contact-modal {
+  height: 100vh;
   opacity: 1;
-  z-index: 12;
 }
 
 #contact-modal .form-title {
