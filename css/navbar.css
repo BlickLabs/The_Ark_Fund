@@ -14,8 +14,10 @@
   display: inline-block;
   height: 115px;
   margin: 30px 0 0 30px;
+  position: relative;
   transition: all 0.2s;
   width: 160px;
+  z-index: 1;
 }
 
 #mavericks-logo.hide-text {
@@ -87,6 +89,7 @@
 
 #navbar-trigger:checked ~ #navbar-trigger-label span:nth-child(3){
   transform: rotate(45deg);
+  z-index: 1;
 }
 
 .navbar-list-container {
@@ -97,13 +100,13 @@
   justify-content: center;
   left: 0;
   opacity: 0;
+  overflow: hidden;
   padding-top: 20px;
   position: fixed;
   top: 0;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
   width: 100%;
-  flex-wrap: wrap;
-  z-index: -1;
+  z-index: 0;
 }
 
 .navbar-list {
@@ -113,10 +116,10 @@
 }
 
 .navbar-list li {
-  display: none;
+  height: 0;
   opacity: 0;
   text-align: right;
-  transition: all 0.2s;
+  transition: height 0.2s;
 }
 
 .navbar-list li a,
@@ -134,12 +137,12 @@
 }
 
 #navbar-trigger:checked ~ .navbar-list-container {
-  height: 100vh;
   opacity: 1;
+  height: 100vh;
 }
 
 #navbar-trigger:checked ~ .navbar-list-container li {
-  display: block;
+  height: auto;
   margin: 0 auto;
   max-width: 300px;
   opacity: 1;
