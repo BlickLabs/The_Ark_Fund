@@ -60,7 +60,7 @@ $(document).ready(function () {
     adjustTitleBottom = function () {
       $('.section-title').css('top', 
         $('.sections-cover-container').outerHeight()
-        - titleHeight/2
+        - 0.3*titleHeight
       );
     };
     adjustTitleTop = function () {
@@ -71,7 +71,7 @@ $(document).ready(function () {
       if (scroll >= scrollTopLimit) {
         moveTitle();
         if (parseFloat($('.section-title').css('top')) > $('.sections-cover-container').outerHeight()
-        - titleHeight/2 || scroll >= scrollBottomLimit) {
+        - 0.3*titleHeight || scroll >= scrollBottomLimit) {
           adjustTitleBottom();
         }
       }
@@ -87,10 +87,10 @@ $(document).ready(function () {
       if (scrollIs('down')) {
         if (scroll > scrollTopLimit) {
           if (titleTop < $('.sections-cover-container').outerHeight()
-        - titleHeight/2) {
+        - 0.3*titleHeight) {
             moveTitle();
           } else if (titleTop > $('.sections-cover-container').outerHeight()
-        - titleHeight/2) {
+        - 0.3*titleHeight) {
             adjustTitleBottom();
           }
         }
@@ -134,6 +134,7 @@ $(document).ready(function () {
   animateWave();
   if ($('.sections-cover-container .section-title').length > 0) {
     animateTitle(true);
+    previousScroll = scroll;
   }
   if ($('.advisor-item').length > 0) {
     animateAdvisors();
