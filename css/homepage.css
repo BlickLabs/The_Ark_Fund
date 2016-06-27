@@ -289,7 +289,12 @@
   width: 100%;
 }
 
-form #contact-send {
+#form-container form select,
+#contact-modal form select {
+  padding-left: 20px;
+}
+
+form #homepage-contact-send {
   background-color: #306bc1 !important;
   border: none !important;
   color: white !important;
