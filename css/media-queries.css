@@ -139,6 +139,10 @@
     padding: 0;
   }
 
+  .team-item-name {
+    margin-top: 10px;
+  }
+
   .advisor-item {
     margin: 0 20px 50px 20px;
   }
