@@ -54,6 +54,10 @@ body {
   line-height: 1.42857143;
 }
 
+a {
+  text-decoration: none;
+}
+
 p {
   margin: 0;
 }
