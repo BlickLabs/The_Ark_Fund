@@ -12,17 +12,18 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: inline-block;
-  height: 115px;
+  height: 135px;
   margin: 30px 0 0 30px;
   position: relative;
   transition: all 0.2s;
-  width: 160px;
+  width: 192px;
   z-index: 1;
 }
 
 #mavericks-logo.hide-text {
   height: 65px;
   margin: 20px 20px 15px 20px;
+  width: 160px;
 }
 
 #mavericks-logo.hide-text ~ #navbar-trigger-label {
