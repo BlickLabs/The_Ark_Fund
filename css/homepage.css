@@ -61,17 +61,18 @@
 }
 
 .homepage-diagram {
-  display: inline-block;
-  margin-bottom: 100px;
-  margin-left: 270px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 140px;
+  padding-left: 40px;
   text-align: center;
-  width: auto
+  width: 770px;
 }
 
 .homepage-diagram-row {
-  margin-top: -10px;
+  position: relative;
   text-align: left;
-  width: auto;
+  width: 630px;
 }
 
 .homepage-diagram-title {
@@ -82,6 +83,7 @@
   display: block;
   font-size: 66px;
 }
+
 
 .homepage-diagram-text {
   display: inline-block;
@@ -97,13 +99,17 @@
 .homepage-diagram-button {
   color: #a5a5a4;
   font-size: 20px;
-  margin-left: 0px;
   margin-top: 10px;
   vertical-align: top;
 }
 
+.homepage-diagram-arrow {
+  position: absolute
+}
+
 .homepage-diagram-row:nth-child(1) .homepage-diagram-arrow {
-  margin-top: -40px;
+  margin-left: 25px;
+  top: 20px;
 }
 
 .homepage-diagram-row:nth-child(2) {
@@ -112,7 +118,7 @@
 
 .homepage-diagram-row:nth-child(2) .homepage-diagram-arrow {
   margin-left: -20px;
-  margin-top: -30px;
+  top: 20px;
 }
 
 .homepage-diagram-row:nth-child(3) {
@@ -120,16 +126,20 @@
 }
 
 .homepage-diagram-row:nth-child(3) .homepage-diagram-arrow {
-  transform: translate(-120%, 120%);
+  top: 175px;
+  right: 160px;
 }
 
-.homepage-diagram-row:nth-child(4) {
+.homepage-diagram-row:nth-child(4) * {
   margin-left: 50px;
-  margin-top: -290px;
+}
+
+.homepage-diagram-row:nth-child(4) .homepage-diagram-title {
+  margin-top: 30px;
 }
 
 .homepage-diagram-row:nth-child(4) .homepage-diagram-arrow {
-  transform: translate(-120%, 30px);
+  transform: translate(-135%, -90%);
 }
 
 #homepage-gray-section {

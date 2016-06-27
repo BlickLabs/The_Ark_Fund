@@ -6,16 +6,28 @@
   } 
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 980px) {
   .homepage-diagram {
-    display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0;
+    width: 100%;
   }
 
   .homepage-diagram-row {
+    margin-left: 0 !important;
     text-align: center;
-    margin: 0 !important;
+    width: 100%;
+  }
+
+  .homepage-diagram-row:nth-child(4) * {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .homepage-diagram-row:nth-child(4) .homepage-diagram-title {
+    font-size: 86.5px;
+    margin-top: 0;
   }
 
   .homepage-diagram-title {
@@ -32,6 +44,7 @@
 
   .homepage-diagram-button {
     margin-left: 5px;
+    margin-top: 10px;
   }
 
   .homepage-diagram-arrow {
@@ -47,7 +60,7 @@
   } 
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 980px) {
   * {
     text-align: center !important;
   }
@@ -167,6 +180,7 @@
   #mavericks-logo.hide-text {
     height: 35px;
     margin-bottom: 10px;
+    width: 85px;
   }
 
   #mavericks-logo.hide-text ~ #navbar-trigger-label {
@@ -370,6 +384,7 @@
   #mavericks-logo.hide-text {
     height: 35px;
     margin-bottom: 10px;
+    width: 85px;
   }
 
   #mavericks-logo.hide-text ~ #navbar-trigger-label {
