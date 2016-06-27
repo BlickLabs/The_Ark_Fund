@@ -135,12 +135,14 @@ $(document).ready(function () {
 
   // Animations
   animateNavbar();
-  animateWave();
-  if ($('.sections-cover-container .section-title').length > 0) {
+  if ($('#form-section').length) {
+    animateWave();
+  }
+  if ($('.sections-cover-container .section-title').length) {
     animateTitle(true);
     previousScroll = scroll;
   }
-  if ($('.advisor-item').length > 0) {
+  if ($('.advisor-item').length) {
     animateAdvisors();
   }
 
@@ -149,11 +151,13 @@ $(document).ready(function () {
     scroll = $(window).scrollTop();
 
     animateNavbar();
-    animateWave();
-    if ($('.sections-cover-container .section-title').length > 0) {
+    if ($('#form-section').length) {
+      animateWave();
+    }
+    if ($('.sections-cover-container .section-title').length) {
       animateTitle(false);
     }
-    if ($('.advisor-item').length > 0) {
+    if ($('.advisor-item').length) {
       animateAdvisors();
     }
 
