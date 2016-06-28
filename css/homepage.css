@@ -22,7 +22,7 @@
 }
 
 .homepage-cover {
-  height: 90vh;
+  height: 75vh;
   background-attachment: fixed;
 }
 
@@ -89,6 +89,7 @@
   display: inline-block;
   font-family: 'Akzidenz Grotesk';
   font-size: 15px;
+  position: relative;
   width: 210px;
 }
 
@@ -99,8 +100,15 @@
 .homepage-diagram-button {
   color: #a5a5a4;
   font-size: 20px;
+  margin-left: 5px;
   margin-top: 10px;
+  position: absolute;
+  transition: color 0.2s;
   vertical-align: top;
+}
+
+.homepage-diagram-button:hover {
+  color: #306bc1;
 }
 
 .homepage-diagram-arrow {

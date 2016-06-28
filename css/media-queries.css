@@ -43,8 +43,8 @@
   }
 
   .homepage-diagram-button {
-    margin-left: 5px;
-    margin-top: 10px;
+    display: block;
+    position: relative;
   }
 
   .homepage-diagram-arrow {
@@ -364,13 +364,13 @@
   }
 }
 
-@media screen and (max-height: 640px) and (orientation: portrait) {
+@media screen and (max-height: 670px) and (orientation: portrait) {
   .navbar-list-container {
     font-size: 30px;
   }
 
   .navbar-list-container li {
-    max-width: 180px !important;
+    max-width: 200px !important;
   }
 }
 
@@ -401,7 +401,7 @@
   }
 
   .navbar-list-container li {
-    max-width: 200px !important;
+    max-width: 130px !important;
   }
 }
 
