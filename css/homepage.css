@@ -345,7 +345,8 @@ form #homepage-contact-send {
   color: #306bc1;
 }
 
-#contact-message {
-  height: 150px;
+#contact-message,
+#homepage-contact-message {
+  height: 190px;
   resize: none;
 }

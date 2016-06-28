@@ -6,7 +6,8 @@ $(document).ready(function () {
     animateNavbar = null,
     animateWave = null,
     animateTitle = null,
-    animateAdvisors = null;
+    animateAdvisors = null,
+    changePlaceholders = null;
 
   animateNavbar = function () {
     if (scroll > 70) {
@@ -133,6 +134,18 @@ $(document).ready(function () {
     });
   };
 
+  changePlaceholders = function (e) {
+    var text = '';
+    if ($(this).val() == 'startup') {
+      text = '1. Tell us your story (personal pitch in 3 sentences).\n\n' +
+      '2. Elevator pitch (problem solution and value proposition; 3 sentences).\n\n' +
+      '3. Share with us your deck (Google Drive, Dropbox, Docksend).';
+    } else {
+      text = 'Share your interests to be part of an angel community.';
+    }
+    $(this).siblings('textarea').attr('placeholder', text);
+  };
+
   // Animations
   animateNavbar();
   if ($('#form-section').length) {
@@ -146,6 +159,13 @@ $(document).ready(function () {
     animateAdvisors();
   }
 
+  $('form textarea').attr('placeholder', '1. Tell us your story (personal pitch in 3 sentences).\n\n' +
+      '2. Elevator pitch (problem solution and value proposition; 3 sentences).\n\n' +
+      '3. Share with us your deck (Google Drive, Dropbox, Docksend).');
+
+  $('#form-container form select').change(changePlaceholders);
+
+  $('#contact-modal form select').change(changePlaceholders);
 
   $(window).scroll(function (e) {
     scroll = $(window).scrollTop();

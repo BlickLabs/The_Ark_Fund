@@ -95,6 +95,10 @@
   width: 80%;
 }
 
+#contact-modal form option {
+  color: #306bc1;
+}
+
 #contact-modal form #contact-send {
   background-color: white !important;
   border: none !important;
