@@ -21,6 +21,10 @@
   background-image: url('../img/background-04.jpg');
 }
 
+#homepage-cover-2 img {
+  max-height: 342px;
+}
+
 .homepage-cover {
   height: 75vh;
   background-attachment: fixed;
