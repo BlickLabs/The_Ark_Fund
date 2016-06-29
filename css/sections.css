@@ -258,6 +258,7 @@
   opacity: 0;
   transition: all 0.7s;
   transform: translateY(50%);
+  vertical-align: top;
 }
 
 .advisor-item.show {
@@ -266,6 +267,7 @@
 }
 
 .advisor-item-photo {
+  border-radius: 50%;
   display: block;
   height: 200px;
   width: 100%;
