@@ -7,9 +7,11 @@ footer {
 }
 
 #mavericks-footer-logo {
+  height: 84px;
   left: 50%;
   position: relative;
   transform: translateX(-50%);
+  width: 120px;
 }
 
 footer .max-width {
