@@ -10,7 +10,7 @@ $(document).ready(function () {
     changePlaceholders = null;
 
   animateNavbar = function () {
-    if (scroll > 70) {
+    if (scroll > 50) {
       $('#mavericks-logo').addClass('hide-text')
     } else {
       $('#mavericks-logo').removeClass('hide-text')
