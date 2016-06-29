@@ -107,7 +107,7 @@
   vertical-align: top;
 }
 
-.homepage-diagram-button:hover {
+.homepage-diagram-row:hover .homepage-diagram-button {
   color: #306bc1;
 }
 
