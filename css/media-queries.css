@@ -53,7 +53,7 @@
     width: 100%;
   }
 
-  .homepage-diagram-text input:checked ~ .homepage-diagram-tooltip {
+  .homepage-diagram-tooltip.visible {
     margin-top: 20px;
   }
 
