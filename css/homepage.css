@@ -97,18 +97,45 @@
   width: 210px;
 }
 
+.homepage-diagram-text input {
+  display: none;
+}
+
 .homepage-diagram-row:nth-child(4) .homepage-diagram-text {
   width: 400px;
 }
 
 .homepage-diagram-button {
   color: #a5a5a4;
+  cursor: pointer;
+  cursor: hand;
   font-size: 20px;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-top: 10px;
   position: absolute;
   transition: color 0.2s;
   vertical-align: top;
+}
+
+.homepage-diagram-tooltip {
+  background: black;
+  color: white;
+  display: block;
+  font-family: 'Akzidenz Grotesk';
+  font-size: 15px;
+  height:0;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 0 40px;
+  position: absolute;
+  transition: all 0.2s;
+  width: 275px;
+  z-index: 3;
+}
+
+.homepage-diagram-text input:checked ~ .homepage-diagram-tooltip {
+  height: auto;
+  padding: 40px;
 }
 
 .homepage-diagram-row:hover .homepage-diagram-button {

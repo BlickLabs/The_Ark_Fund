@@ -47,6 +47,16 @@
     position: relative;
   }
 
+  .homepage-diagram-tooltip {
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .homepage-diagram-text input:checked ~ .homepage-diagram-tooltip {
+    margin-top: 20px;
+  }
+
   .homepage-diagram-arrow {
     display: none;
   }
