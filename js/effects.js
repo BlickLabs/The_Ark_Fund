@@ -168,21 +168,25 @@ $(document).ready(function () {
   $('#contact-modal form select').change(changePlaceholders);
 
   if ($('.homepage-diagram').length) {
-    $('.homepage-diagram-button').toArray().forEach(function (elem, index) {
+    $('.homepage-diagram-button').toArray().forEach(function (elem) {
       $(elem).click(function (e) {
-        if (!$($(elem).siblings('input')[0]).is(':checked')) {
-          $(elem).parent().parent().siblings().children('.homepage-diagram-text').children('input').toArray().forEach(function (elem) {
-            if ($(elem).is(':checked')) {
-              $(elem).prop('checked', false);
-            }
-          });
+        if ($(elem).hasClass('fa-plus')) {
+          $(elem).siblings('.homepage-diagram-tooltip').addClass('visible');
+          $(elem).removeClass('fa-plus');
+          $(elem).addClass('fa-minus');
+        } else {
+          $(elem).siblings('.homepage-diagram-tooltip').removeClass('visible');
+          $(elem).removeClass('fa-minus');
+          $(elem).addClass('fa-plus');
         }
       });
     });
     $('html').click(function (e) {
       if (!$($(e.target).parent()).hasClass('homepage-diagram-text')) {
-        $('.homepage-diagram-text input').toArray().forEach(function (elem) {
-          $(elem).prop('checked', false);
+        $('.homepage-diagram-button').toArray().forEach(function (elem) {
+          $(elem).removeClass('fa-minus');
+          $(elem).addClass('fa-plus');
+          $(elem).siblings('.homepage-diagram-tooltip').removeClass('visible');
         });
       }
     });
