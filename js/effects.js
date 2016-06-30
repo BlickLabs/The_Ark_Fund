@@ -167,6 +167,27 @@ $(document).ready(function () {
 
   $('#contact-modal form select').change(changePlaceholders);
 
+  if ($('.homepage-diagram').length) {
+    $('.homepage-diagram-button').toArray().forEach(function (elem, index) {
+      $(elem).click(function (e) {
+        if (!$($(elem).siblings('input')[0]).is(':checked')) {
+          $(elem).parent().parent().siblings().children('.homepage-diagram-text').children('input').toArray().forEach(function (elem) {
+            if ($(elem).is(':checked')) {
+              $(elem).prop('checked', false);
+            }
+          });
+        }
+      });
+    });
+    $('html').click(function (e) {
+      if (!$($(e.target).parent()).hasClass('homepage-diagram-text')) {
+        $('.homepage-diagram-text input').toArray().forEach(function (elem) {
+          $(elem).prop('checked', false);
+        });
+      }
+    });
+  }
+
   $(window).scroll(function (e) {
     scroll = $(window).scrollTop();
 

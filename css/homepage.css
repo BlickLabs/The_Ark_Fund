@@ -138,6 +138,13 @@
   padding: 40px;
 }
 
+.homepage-diagram-text input:checked ~ .homepage-diagram-button::before {
+  color: #306bc1;
+  content: '-';
+  font-size: 50px;
+  line-height: 10px;
+}
+
 .homepage-diagram-row:hover .homepage-diagram-button {
   color: #306bc1;
 }
