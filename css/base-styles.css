@@ -58,6 +58,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  cursor: hand;
+}
+
 p {
   margin: 0;
 }
