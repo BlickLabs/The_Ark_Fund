@@ -135,9 +135,9 @@
   }
 
   .team-item-photo {
+    height: 215px;
     margin: 0 auto;
-    max-width: 280px;
-    width: 90%;
+    width: 185px;
   }
 
   .team-item-data {

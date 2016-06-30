@@ -180,8 +180,12 @@
 }
 
 .team-item-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
   display: block;
-  width: 260px;
+  height: 300px;
+  width: 259px;
 }
 
 .team-item-data {
@@ -267,6 +271,9 @@
 }
 
 .advisor-item-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
   border-radius: 50%;
   display: block;
   height: 200px;
