@@ -171,30 +171,6 @@
     height: auto;
     width: 100%;
   }
-  #mavericks-logo {
-    height: 55px;
-    margin: 15px;
-    width: 80px;
-  }
-
-  #mavericks-logo.hide-text {
-    height: 35px;
-    margin-bottom: 10px;
-    width: 85px;
-  }
-
-  #mavericks-logo.hide-text ~ #navbar-trigger-label {
-    margin-top: 24px;
-  }
-
-  #navbar-trigger-label {
-    margin-right: 20px;
-  }
-
-  #navbar-trigger-label span{
-    height: 3px;
-    width: 30px;
-  }
 
   .big-text {
     font-size: 30px;
@@ -375,12 +351,19 @@
 }
 
 @media screen and (max-height: 640px) and (orientation: landscape) {
+  .navbar-list-container li {
+    max-width: 200px !important;
+  }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape),
+  screen and (max-width: 660px) {
   #mavericks-logo {
     height: 55px;
     margin: 15px;
     width: 80px;
   }
-
+  
   #mavericks-logo.hide-text {
     height: 35px;
     margin-bottom: 10px;
@@ -398,10 +381,6 @@
   #navbar-trigger-label span{
     height: 3px;
     width: 30px;
-  }
-
-  .navbar-list-container li {
-    max-width: 200px !important;
   }
 }
 
