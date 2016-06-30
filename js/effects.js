@@ -168,26 +168,37 @@ $(document).ready(function () {
   $('#contact-modal form select').change(changePlaceholders);
 
   if ($('.homepage-diagram').length) {
-    $('.homepage-diagram-button').toArray().forEach(function (elem) {
-      $(elem).click(function (e) {
-        if ($(elem).hasClass('fa-plus')) {
-          $(elem).siblings('.homepage-diagram-tooltip').addClass('visible');
-          $(elem).removeClass('fa-plus');
-          $(elem).addClass('fa-minus');
-        } else {
-          $(elem).siblings('.homepage-diagram-tooltip').removeClass('visible');
-          $(elem).removeClass('fa-minus');
-          $(elem).addClass('fa-plus');
-        }
-      });
-    });
     $('html').click(function (e) {
       if (!$($(e.target).parent()).hasClass('homepage-diagram-text')) {
-        $('.homepage-diagram-button').toArray().forEach(function (elem) {
-          $(elem).removeClass('fa-minus');
-          $(elem).addClass('fa-plus');
-          $(elem).siblings('.homepage-diagram-tooltip').removeClass('visible');
-        });
+        $('.homepage-diagram-button')
+          .removeClass('fa-minus')
+          .addClass('fa-plus')
+          .siblings('.homepage-diagram-tooltip')
+          .removeClass('visible');
+      } else {
+        $(e.target)
+          .parent().parent().siblings()
+          .children('.homepage-diagram-text').children('.homepage-diagram-tooltip')
+          .removeClass('visible');
+        $(e.target)
+          .parent().parent().siblings()
+          .children('.homepage-diagram-text').children('.homepage-diagram-button')
+          .removeClass('fa-minus').addClass('fa-plus');
+      }
+    });
+    $('.homepage-diagram-button').click(function (e) {
+      if ($(this).hasClass('fa-plus')) {
+        $(this)
+          .siblings('.homepage-diagram-tooltip').addClass('visible');
+        $(this)
+          .removeClass('fa-plus')
+          .addClass('fa-minus');
+      } else {
+        $(this)
+          .siblings('.homepage-diagram-tooltip').removeClass('visible');
+        $(this)
+          .removeClass('fa-minus')
+          .addClass('fa-plus');
       }
     });
   }
