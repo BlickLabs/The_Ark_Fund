@@ -3,7 +3,11 @@
 @media screen and (max-width: 1322px) {
   .two-columns .white-container {
     padding: 30px;
-  } 
+  }
+
+  .advisor-item {
+    width: 38%;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -297,12 +301,6 @@
   }
 }
 
-@media screen and (max-height: 560px) {
-  #contact-modal .form-title {
-    font-size: 30px;
-  }
-}
-
 /* HEIGHT BASED MEDIA QUERIES*/
 
 @media screen and (max-height: 736px) {
@@ -334,6 +332,7 @@
     width: 85%;
   }
 }
+
 @media screen and (max-height: 640px) {
   .navbar-list-container {
     font-size: 30px;
@@ -363,6 +362,12 @@
 @media screen and (max-height: 640px) and (orientation: landscape) {
   .navbar-list-container li {
     max-width: 200px !important;
+  }
+}
+
+@media screen and (max-height: 560px) {
+  #contact-modal .form-title {
+    font-size: 30px;
   }
 }
 
