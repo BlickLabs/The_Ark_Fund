@@ -244,13 +244,12 @@
 
 .advisor-item {
   display: inline-block;
-  margin: 0 40px 60px 40px;
-  min-width: 180px;
+  margin: 0 35px 60px 35px;
   opacity: 0;
   transition: all 0.7s;
   transform: translateY(50%);
   vertical-align: top;
-  width: 18%;
+  width: 180px;
 }
 
 .advisor-item.show {

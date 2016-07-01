@@ -4,9 +4,11 @@
   .two-columns .white-container {
     padding: 30px;
   }
+}
 
+@media screen and (max-width: 1130px) {
   .advisor-item {
-    width: 38%;
+    margin: 0 20px 50px 20px;
   }
 }
 
@@ -36,10 +38,6 @@
   .team-item-name {
     margin-top: 10px;
   }
-
-  .advisor-item {
-    margin: 0 20px 50px 20px;
-  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -48,6 +46,13 @@
     padding-left: 10px;
     padding-right: 10px;
   } 
+}
+
+@media screen and (max-width: 995px) {
+  .advisor-item {
+    min-width: 180px;
+    width: 38%;
+  }
 }
 
 @media screen and (max-width: 980px) {
