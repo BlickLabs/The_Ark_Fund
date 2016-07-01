@@ -10,59 +10,35 @@
   }
 }
 
-@media screen and (max-width: 980px) {
-  .homepage-diagram {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    width: 100%;
+@media screen and (max-width: 1080px) {
+  .team-item {
+    width: 220px;
   }
 
-  .homepage-diagram-row {
-    margin-left: 0 !important;
-    text-align: center;
-    width: 100%;
+  .team-item-photo {
+    height: 215px;
+    margin: 0 auto;
+    width: 185px;
   }
 
-  .homepage-diagram-row:nth-child(4) * {
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .homepage-diagram-row:nth-child(4) .homepage-diagram-title {
-    font-size: 86.5px;
-    margin-top: 0;
-  }
-
-  .homepage-diagram-title {
-    display: inline-block;
-    width: 100%;
-  }
-
-  .homepage-diagram-text {
-    display: inline-block;
-    max-width: 450px;
-    text-align: left !important;
-    width: 100% !important;
-  }
-
-  .homepage-diagram-button {
-    display: block;
+  .team-item-data {
+    left: 0;
     position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
   }
 
-  .homepage-diagram-tooltip {
-    margin-top: 0;
-    position: relative;
-    width: 100%;
+  .team-item-data * {
+    padding: 0;
   }
 
-  .homepage-diagram-tooltip.visible {
-    margin-top: 20px;
+  .team-item-name {
+    margin-top: 10px;
   }
 
-  .homepage-diagram-arrow {
-    display: none;
+  .advisor-item {
+    margin: 0 20px 50px 20px;
   }
 }
 
@@ -141,37 +117,69 @@
     display: block;
     margin: 20px 0;
   }
+
+  .homepage-diagram {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .homepage-diagram-row {
+    margin-left: 0 !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .homepage-diagram-row:nth-child(4) * {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .homepage-diagram-row:nth-child(4) .homepage-diagram-title {
+    font-size: 86.5px;
+    margin-top: 0;
+  }
+
+  .homepage-diagram-title {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .homepage-diagram-text {
+    display: inline-block;
+    max-width: 450px;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .homepage-diagram-button {
+    display: block;
+    position: relative;
+  }
+
+  .homepage-diagram-tooltip {
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .homepage-diagram-tooltip.visible {
+    margin-top: 20px;
+  }
+
+  .homepage-diagram-arrow {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 800px) {
-  .team-item::after {
-    border: none !important;
+@media screen and (max-width: 810px) {
+  .team-item {
+    display: block;
   }
 
-  .team-item-photo {
-    height: 215px;
-    margin: 0 auto;
-    width: 185px;
-  }
-
-  .team-item-data {
-    left: 0;
-    position: relative;
-    right: 0;
-    top: 0;
-    transform: none;
-  }
-
-  .team-item-data * {
-    padding: 0;
-  }
-
-  .team-item-name {
-    margin-top: 10px;
-  }
-
-  .advisor-item {
-    margin: 0 20px 50px 20px;
+  .team-item:not(:first-child) {
+    margin-top: 80px;
   }
 }
 
