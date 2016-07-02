@@ -377,3 +377,25 @@ form #homepage-contact-send {
   height: 190px;
   resize: none;
 }
+
+form label.error {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  text-align: left;
+}
+
+form .response {
+  border: none !important;
+  text-align: left;
+}
+
+form .response.ok {
+  background: #afe495 !important;
+  color: #306bc1 !important;
+}
+
+form .response.error {
+  background-color: #EA4C4C !important;
+  color: white !important;
+}
