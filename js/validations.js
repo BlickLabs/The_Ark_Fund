@@ -16,7 +16,7 @@ $(document).ready(function () {
       submitHandler: function(form) {
         $.ajax({
           type: 'POST',
-          url: '',
+          url: 'send_mail.php',
           data: $(form).serialize(),
           success: function(data){
             $(form)
