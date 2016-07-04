@@ -13,7 +13,7 @@ $msg = $_POST['contact-message'];
 /* Desarrollo */
 $api_key = 'key-eb656047b090ea091ef7c5d2fbd83dc5';
 // $send_to = '';
-$send_to = 'mauriciodinki@gmail.com';
+$send_to = 'luis@mavericks.capital';
 
 $mgClient = new Mailgun($api_key);
 $domain = "mg.mavericks.capital";
