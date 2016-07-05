@@ -161,7 +161,7 @@ $(document).ready(function () {
 
   $('form textarea').attr('placeholder', '1. Tell us your story (personal pitch in 3 sentences).\n\n' +
       '2. Elevator pitch (problem solution and value proposition; 3 sentences).\n\n' +
-      '3. Share with us your deck (Google Drive, Dropbox, Docksend).');
+      '3. Share with us your deck (Google Drive, Dropbox, Docsend).');
 
   $('#form-container form select').change(changePlaceholders);
 
