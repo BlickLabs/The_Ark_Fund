@@ -121,7 +121,7 @@
   footer .footer-social-media a {
     display: inline-block;
     width: 15%;
-    margin-top: 20px
+    margin: 20px auto 0 auto;
   }
 
   .homepage-diagram {
