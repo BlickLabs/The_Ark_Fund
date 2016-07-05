@@ -58,12 +58,12 @@ $(document).ready(function () {
     };
 
     moveTitle = function (direction) {
-      $('.section-title').css('top', 
+      $('.section-title').css('top',
         parseInt($('.section-title').css('top')) + 1.5*(scroll - previousScroll)
       );
     };
     adjustTitleBottom = function () {
-      $('.section-title').css('top', 
+      $('.section-title').css('top',
         $('.sections-cover-container').outerHeight()
         - 0.3*titleHeight
       );
@@ -139,7 +139,7 @@ $(document).ready(function () {
     if ($(this).val() == 'startup') {
       text = '1. Tell us your story (personal pitch in 3 sentences).\n\n' +
       '2. Elevator pitch (problem solution and value proposition; 3 sentences).\n\n' +
-      '3. Share with us your deck (Google Drive, Dropbox, Docksend).';
+      '3. Share with us your deck (Google Drive, Dropbox, Docsend).';
     } else {
       text = 'Share your interests to be part of an angel community.';
     }
