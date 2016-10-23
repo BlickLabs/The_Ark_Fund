@@ -190,6 +190,11 @@
 }
 
 @media screen and (max-width: 660px) {
+  .homepage-introduction {
+    font-size: 23px !important;
+    padding-top: 0;
+  }
+
   .homepage-investment-item {
     height: 60px;
     width: 33%;
@@ -369,13 +374,13 @@
   }
 
   .navbar-list-container li {
-    max-width: 200px !important;
+    max-width: 240px !important;
   }
 }
 
 @media screen and (max-height: 640px) and (orientation: landscape) {
   .navbar-list-container li {
-    max-width: 200px !important;
+    max-width: 160px !important;
   }
 }
 
@@ -410,6 +415,13 @@
   #navbar-trigger-label span{
     height: 3px;
     width: 30px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .homepage-introduction {
+    font-size: 20px !important;
+    padding-top: 0;
   }
 }
 

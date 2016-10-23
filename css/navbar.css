@@ -146,7 +146,7 @@
 #navbar-trigger:checked ~ .navbar-list-container li {
   height: auto;
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 410px;
   opacity: 1;
   width: 80%;
 }
