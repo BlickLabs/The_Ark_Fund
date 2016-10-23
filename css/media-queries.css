@@ -388,7 +388,7 @@
 @media screen and (max-height: 500px) and (orientation: landscape),
   screen and (max-width: 660px) {
   #mavericks-logo {
-    height: 55px;
+    height: 34px;
     margin: 15px;
     width: 80px;
   }
