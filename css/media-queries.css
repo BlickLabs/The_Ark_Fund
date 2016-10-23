@@ -75,7 +75,7 @@
     text-align: justify !important;
   }
 
-  #mavericks-navbar {
+  #theark-navbar {
     text-align: left !important;
   }
 
@@ -101,7 +101,7 @@
     width: 80%;
   }
 
-  #mavericks-footer-logo {
+  #theark-footer-logo {
     display: inline-block;
     left: 0;
     margin-top: 30px;
@@ -392,19 +392,19 @@
 
 @media screen and (max-height: 500px) and (orientation: landscape),
   screen and (max-width: 660px) {
-  #mavericks-logo {
+  #theark-logo {
     height: 34px;
     margin: 15px;
     width: 80px;
   }
 
-  #mavericks-logo.hide-text {
+  #theark-logo.hide-text {
     height: 35px;
     margin-bottom: 10px;
     width: 85px;
   }
 
-  #mavericks-logo.hide-text ~ #navbar-trigger-label {
+  #theark-logo.hide-text ~ #navbar-trigger-label {
     margin-top: 24px;
   }
 

@@ -1,4 +1,4 @@
-#mavericks-navbar {
+#theark-navbar {
   background-color: white;
   left: 0;
   position: fixed;
@@ -7,7 +7,7 @@
   z-index: 10 !important;
 }
 
-#mavericks-logo {
+#theark-logo {
   background-image: url('../img/icons/icons-03.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -20,17 +20,17 @@
   z-index: 1;
 }
 
-#mavericks-logo.hide-text {
+#theark-logo.hide-text {
   height: 65px;
   margin: 20px 20px 15px 20px;
   width: 160px;
 }
 
-#mavericks-logo.hide-text ~ #navbar-trigger-label {
+#theark-logo.hide-text ~ #navbar-trigger-label {
   margin-top: 38px;
 }
 
-#navbar-trigger:checked ~ #mavericks-logo {
+#navbar-trigger:checked ~ #theark-logo {
   background-image: url('../img/icons/iconss-19.png');
 }
 
