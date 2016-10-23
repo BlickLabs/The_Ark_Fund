@@ -11,9 +11,9 @@ $(document).ready(function () {
 
   animateNavbar = function () {
     if (scroll > 50) {
-      $('#mavericks-logo').addClass('hide-text')
+      $('#theark-logo').addClass('hide-text')
     } else {
-      $('#mavericks-logo').removeClass('hide-text')
+      $('#theark-logo').removeClass('hide-text')
     }
   };
 
@@ -48,7 +48,7 @@ $(document).ready(function () {
     coverTop = $('.sections-cover-container .cover').offset().top;
     titleTop = parseFloat($('.section-title').css('top'));
     titleHeight = $('.section-title').outerHeight();
-    navbarHeight = $('#mavericks-navbar').outerHeight();
+    navbarHeight = $('#theark-navbar').outerHeight();
     scrollTopLimit = initialTitleTop - navbarHeight;
     scrollBottomLimit = coverHeight + coverTop - titleHeight - navbarHeight;
 

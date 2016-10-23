@@ -1,10 +1,10 @@
 {
-  "name": "Mavericks",
-  "homepage": "https://github.com/BlickLabs/Mavericks",
+  "name": "The Ark.Fund",
+  "homepage": "https://github.com/BlickLabs/The_Ark_Fund",
   "authors": [
     "Alan Sanchez <sanchezpineda03@gmail.com>"
   ],
-  "description": "Mavericks webpage",
+  "description": "The Ark.Fund webpage",
   "main": "",
   "moduleType": [],
   "license": "MIT",
