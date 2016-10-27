@@ -35,17 +35,29 @@
   padding: 0 30px;
 }
 
+.how-to-icon {
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #efefef;
+  color: #555;
+  font-size: 50px;
+  height: 150px;
+  padding: 50px;
+  width: 150px;
+}
+
 .how-to-step .step-number {
   border-bottom: 1px #dfdfdf solid;
   display: block;
   width: 100%;
   font-size: 25px;
+  line-height: 46px;
 }
 
 .how-to-step .big {
   display: block;
   font-size: 21px;
-  margin: 4px 0;
+  margin: 8px 0 4px 0;
 }
 
 #homepage-cover-1 {
