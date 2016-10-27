@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Ark.Fund | The Network</title>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <div id="overflow-container">
+    <nav id="theark-navbar">
+      <input type="checkbox" id="navbar-trigger" />
+      <a href="index.html" id="theark-logo"> </a>
+      <label id="navbar-trigger-label" for="navbar-trigger">
+        <span> </span>
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </label>
+      <div class="navbar-list-container vertical-center">
+        <ul class="navbar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="startups.html">For Startups</a></li>
+          <li><a href="angels.html">For Angels</a></li>
+          <li class="active"><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><label for="modal-trigger">Belong to The Ark</label></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="content">
+      <h2 id="portfolio-section-title" class="section-title">Portfolio<span class="blue-text">.</span></h2>
+      <div class="light-gray-background">
+        <div class="max-width text-center portfolio">
+          <div class="white-container vertical-center italic">
+            <span>Coming <span class="blue-text">Soon,</span><br>
+            but you could be our first.</span>
+
+          </div>
+          <div class="contact-us">
+            <input type="checkbox" id="modal-trigger"/>
+            <div>Belong to The Ark. <span class="blue-text"><label id="modal-trigger-label" for="modal-trigger">Talk to us</label></span>.</div>
+            <div id="contact-modal" class="vertical-center">
+              <label id="modal-destroyer-label" for="modal-trigger">
+                <span></span>
+                <span></span>
+              </label>
+              <div>
+                <div>
+                  <div class="form-title">
+                    <span class="black-text">Belong to The Ark.</span> Talk to us<span class="black-text">.</span>
+                  </div>
+                </div>
+                <form action="">
+                  <input type="text" id="contact-name" name="contact-name" placeholder="Name" />
+                  <input type="email" id="contact-email" name="contact-email" placeholder="Email" />
+                  <select id="contact-type" name="contact-type">
+                    <option value="startup">Startup</option>
+                    <option value="angel">Angel Investor</option>
+                  </select>
+                  <textarea id="contact-message" name="contact-message" placeholder="Message"></textarea>
+                  <button type="submit" id="contact-send" name="contact-send">Send</button>
+                </form>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="max-width">
+        Follow us:
+        <div class="footer-social-media akzidenz">
+          <a href="https://twitter.com/The Ark.Fundvc">
+            <span class="fa fa-twitter social-media-icon"></span>
+            
+          </a>
+          <a href="https://www.facebook.com/The Ark.Fundcapital">
+            <span class="fa fa-facebook-square social-media-icon"></span>
+            
+          </a>
+          <a href="https://medium.com/@The Ark.Fundvc">
+            <span class="fa fa-medium social-media-icon"></span>
+            
+          </a>
+        </div>
+      </div>
+      <img id="theark-footer-logo" src="img/icons/iconss-19.png" />
+    </footer>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/validations.js"></script>
+</body>
+</html>
