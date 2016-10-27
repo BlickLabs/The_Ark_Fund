@@ -11,6 +11,43 @@
   width: 100%;
 }
 
+.homepage-how-to {
+  padding: 60px 50px;
+}
+
+.homepage-how-to h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding: 0 30px;
+}
+
+.how-to-steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.how-to-step {
+  box-sizing: border-box;
+  text-align: center;
+  flex-basis: 25%;
+  padding: 0 30px;
+}
+
+.how-to-step .step-number {
+  border-bottom: 1px #dfdfdf solid;
+  display: block;
+  width: 100%;
+  font-size: 25px;
+}
+
+.how-to-step .big {
+  display: block;
+  font-size: 21px;
+  margin: 4px 0;
+}
+
 #homepage-cover-1 {
   background-image: url('../img/background-03.jpg');
   color: white;
