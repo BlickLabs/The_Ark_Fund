@@ -12,7 +12,7 @@
 }
 
 .homepage-how-to {
-  padding: 60px 50px;
+  padding: 90px 50px;
 }
 
 .homepage-how-to h2 {
@@ -25,14 +25,19 @@
 .how-to-steps {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 60px;
+}
+
+.how-to-step-container {
+  flex-basis: 250px;
 }
 
 .how-to-step {
   box-sizing: border-box;
-  text-align: center;
-  flex-basis: 25%;
   padding: 0 30px;
+  text-align: center;
+  width: 250px;
 }
 
 .how-to-icon {
@@ -51,7 +56,7 @@
   display: block;
   width: 100%;
   font-size: 25px;
-  line-height: 46px;
+  line-height: 50px;
 }
 
 .how-to-step .big {
