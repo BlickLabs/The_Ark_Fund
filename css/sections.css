@@ -297,3 +297,31 @@
   display: block;
   margin-top: 100px;
 }
+
+.network .animal {
+  display: flex;
+}
+
+.animal.inverse {
+  flex-direction: flex-reverse;
+}
+
+.animal .image {
+  flex-basis: 170px;
+}
+
+.animal .image img {
+  width: 100%;
+}
+
+.animal .text {
+  flex-grow: 1;
+  padding: 0 60px;
+  font-size: 19px;
+  max-width: calc(100% - 170px);
+  line-height: 2em;
+}
+
+.animal .text .title {
+  font-size: 30px;
+}
