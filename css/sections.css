@@ -302,8 +302,12 @@
   display: flex;
 }
 
+.animal:not(:first-of-type) {
+  margin-top: 120px;
+}
+
 .animal.inverse {
-  flex-direction: flex-reverse;
+  flex-direction: row-reverse;
 }
 
 .animal .image {
