@@ -60,7 +60,7 @@
     text-align: center !important;
   }
 
-  .common .white-container {
+  .common:not(.network) .white-container {
     padding: 80px 0;
   }
 
@@ -176,6 +176,48 @@
 
   .homepage-diagram-arrow {
     display: none;
+  }
+
+  .common.network .white-container {
+    padding: 100px 70px;
+  }
+
+  .network .introduction {
+    font-size: 19px;
+  }
+
+  .network .animal {
+    flex-wrap: wrap;
+  }
+
+  .animal .image {
+    text-align: center !important;
+    flex-basis: 100%;
+  }
+
+  .animal .image img {
+    min-width: 150px;
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  .animal .image.hawk img {
+    transform: none;
+  }
+
+  .animal .text {
+    font-size: 16px;
+    flex-basis: 100%;
+    max-width: initial;
+    padding: 0;
+  }
+
+  .animal .text .title {
+    font-size: 21px;
+  }
+
+  .animal.inverse {
+    flex-direction: row;
   }
 }
 
@@ -317,6 +359,15 @@
 
   .portfolio .white-container {
     font-size: 30px !important;
+  }
+
+  .common.network {
+    padding-top: 70px;
+  }
+
+  .common.network .white-container {
+    margin-top: 70px;
+    padding: 60px 40px;
   }
 }
 
