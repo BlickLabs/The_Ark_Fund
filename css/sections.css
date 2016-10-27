@@ -284,3 +284,16 @@
 .icon-social-media img {
   margin-top: 5px;
 }
+
+.common.network {
+  padding-top: 120px;
+}
+
+.network .introduction {
+  font-size: 23px;
+}
+
+.network .white-container {
+  display: block;
+  margin-top: 100px;
+}
