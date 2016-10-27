@@ -368,7 +368,7 @@
   }
 }
 
-@media screen and (max-height: 670px) and (orientation: portrait) {
+@media screen and (max-height: 750px) and (orientation: portrait) {
   .navbar-list-container {
     font-size: 30px;
   }
@@ -378,7 +378,7 @@
   }
 }
 
-@media screen and (max-height: 640px) and (orientation: landscape) {
+@media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 800px) {
   .navbar-list-container li {
     max-width: 160px !important;
   }
