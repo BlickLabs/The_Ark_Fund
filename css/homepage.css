@@ -35,9 +35,12 @@
 
 .how-to-step {
   box-sizing: border-box;
+  margin: 0 auto;
   padding: 0 30px;
+  min-width: 250px;
+  max-width: 300px;
   text-align: center;
-  width: 250px;
+  width: 100%;
 }
 
 .how-to-icon {

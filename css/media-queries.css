@@ -12,6 +12,21 @@
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .homepage-how-to {
+    padding: 60px 50px 75px 50px;
+  }
+
+  .how-to-step-container {
+    flex-basis: 50%;
+  }
+
+  .how-to-step-container:nth-child(3),
+  .how-to-step-container:nth-child(4) {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .team-item {
     width: 220px;
@@ -368,6 +383,28 @@
   .common.network .white-container {
     margin-top: 70px;
     padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homepage-how-to {
+    padding: 40px 20px 60px 20px;
+  }
+
+  .homepage-how-to h2 {
+    font-size: 23px;
+  }
+
+  .how-to-steps {
+    margin-top: 40px;
+  }
+
+  .how-to-step-container {
+    flex-basis: 100%;
+  }
+
+  .how-to-step-container:not(:first-child) {
+    margin-top: 60px;
   }
 }
 
