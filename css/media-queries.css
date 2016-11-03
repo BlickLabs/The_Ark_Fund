@@ -57,6 +57,7 @@
 
 @media screen and (max-width: 1050px) {
   .homepage-introduction {
+    font-size: 40px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -237,6 +238,10 @@
 }
 
 @media screen and (max-width: 810px) {
+  .homepage-introduction {
+    font-size: 32px;
+  }
+
   .team-item {
     display: block;
   }
