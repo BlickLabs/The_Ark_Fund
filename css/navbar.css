@@ -91,6 +91,11 @@
   z-index: 2;
 }
 
+.navbar-list-container.active {
+  opacity: 1;
+  right: 0;
+}
+
 .navbar-list-container img {
   display: block;
   margin: 30px auto;
@@ -121,9 +126,4 @@
 .navbar-list li:hover a,
 .navbar-list li:hover label {
   color: black;
-}
-
-.navbar-list-container.active {
-  opacity: 1;
-  right: 0;
 }
