@@ -146,8 +146,19 @@ $(document).ready(function () {
     $(this).siblings('textarea').attr('placeholder', text);
   };
 
+  animateLogo = function () {
+    if (scroll >= 50) {
+      $('.homepage-navbar-logo').removeClass('hide');
+    } else {
+      $('.homepage-navbar-logo').addClass('hide');
+    }
+  }
+
   // Animations
   animateNavbar();
+  if ($('.homepage-navbar-logo').length) {
+    animateLogo();
+  }
   if ($('#form-section').length) {
     animateWave();
   }
@@ -207,6 +218,9 @@ $(document).ready(function () {
     scroll = $(window).scrollTop();
 
     animateNavbar();
+    if ($('.homepage-navbar-logo').length) {
+      animateLogo();
+    }
     if ($('#form-section').length) {
       animateWave();
     }
