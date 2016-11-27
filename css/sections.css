@@ -1,5 +1,4 @@
 .sections-cover-container {
-  margin-top: 100px;
   height: 70vh;
   position: relative;
 }
@@ -138,9 +137,14 @@
 
 #portfolio-section-title,
 #team-section-title {
-  margin-top: 50px;
-  position: relative !important;
-  transform: translate(-50%, 40%);
+  display: block;
+  padding-top: 0.6em;
+  transform: none;
+  left: 0;
+  position: relative;
+  line-height: 1;
+  text-align: center;
+
 }
 
 .portfolio.max-width,
