@@ -95,10 +95,6 @@
     text-align: left !important;
   }
 
-  .navbar-list li {
-    text-align: right !important;
-  }
-
   #form-container form *:not(#homepage-contact-send),
   #contact-modal form *:not(#contact-send) {
     text-align: left !important;
@@ -452,10 +448,6 @@
 }
 
 @media screen and (max-height: 640px) {
-  .navbar-list-container {
-    font-size: 30px;
-  }
-
   #contact-modal > div {
     top: 0;
     transform: none;
@@ -464,22 +456,6 @@
   #contact-modal .form-title {
     margin-bottom: 20px;
     margin-top: 80px;
-  }
-}
-
-@media screen and (max-height: 750px) and (orientation: portrait) {
-  .navbar-list-container {
-    font-size: 30px;
-  }
-
-  .navbar-list-container li {
-    max-width: 260px !important;
-  }
-}
-
-@media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 800px) {
-  .navbar-list-container li {
-    max-width: 160px !important;
   }
 }
 
@@ -525,9 +501,6 @@
 }
 
 @media screen and (max-height: 450px) {
-  .navbar-list-container {
-    font-size: 18px;
-  }
   .link-media {
     display: inline-block;
     width: 30%;
