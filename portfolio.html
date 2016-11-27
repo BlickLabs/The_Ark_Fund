@@ -11,22 +11,22 @@
 <body>
   <div id="overflow-container">
     <nav id="theark-navbar">
-      <input type="checkbox" id="navbar-trigger" />
       <a href="index.html" id="theark-logo"> </a>
-      <label id="navbar-trigger-label" for="navbar-trigger">
+      <span id="navbar-trigger-label" class="menu-trigger">
         <span> </span>
         <span> </span>
         <span> </span>
         <span> </span>
-      </label>
-      <div class="navbar-list-container vertical-center">
+      </span>
+      <div class="navbar-list-container">
+        <img src="img/icons/iconss-19.png">
         <ul class="navbar-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://angel.co/lxbp">Syndicate</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="syndicate.html">Syndicate</a></li>
           <li><a href="angels.html">For Angels</a></li>
           <li><a href="startups.html">For Startups</a></li>
           <li><a href="network.html">The Network</a></li>
-          <li class="active"><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="about.html">About us</a></li>
           <li><label for="modal-trigger">Join The Ark</label></li>
@@ -95,6 +95,7 @@
   </div>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/effects.js"></script>
   <script src="js/validations.js"></script>
 </body>
