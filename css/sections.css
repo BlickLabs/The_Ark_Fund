@@ -288,19 +288,51 @@
   margin-top: 5px;
 }
 
-.common.network {
+.common.network, .common.syndicates {
   padding-top: 70px;
 }
 
-.network .introduction {
+.network .introduction,
+.syndicates .introduction {
   font-size: 23px;
 }
 
-.network .white-container {
+.network .white-container,
+.syndicates .white-container {
   display: block;
   margin-top: 100px;
+}
+
+.network .white-container {
   padding-bottom: 120px;
   padding-top: 120px;
+}
+
+.syndicates .white-container {
+  font-size: 1.2em;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.syndicates-subtitle {
+  font-size: 1.6em;
+  line-height: 1.25;
+  margin: 0;
+  margin-bottom: 0.8em;
+}
+
+.syndicates-subtitle:not(:first-of-type) {
+  margin-top: 1.5em;
+}
+
+.syndicates .white-container .text {
+  margin: 0 auto;
+  max-width: 810px;
+  width: 80%;
+}
+
+.syndicates .white-container p:not(:first-of-type) {
+  margin-top: 1em;
 }
 
 .network .animal {

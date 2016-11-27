@@ -76,7 +76,8 @@
     text-align: center !important;
   }
 
-  .common:not(.network) .white-container {
+  .common:not(.network) .white-container,
+  .common:not(.syndicates) .white-container {
     padding: 80px 0;
   }
 
@@ -190,8 +191,12 @@
     display: none;
   }
 
-  .common.network .white-container {
+  .common.network .white-container{
     padding: 100px 70px;
+  }
+
+  .common.syndicates .white-container {
+    padding: 50px 0;
   }
 
   .network .introduction {
