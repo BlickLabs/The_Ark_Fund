@@ -65,18 +65,17 @@ $(document).ready(function () {
     adjustTitleBottom = function () {
       $('.section-title').css('top',
         $('.sections-cover-container').outerHeight()
-        - 0.3*titleHeight
       );
     };
     adjustTitleTop = function () {
-      $('.section-title').css('top', 0);
+      $('.section-title').css('top', coverHeight/2);
     };
 
     if (pristineScroll) {
       if (scroll >= scrollTopLimit) {
         moveTitle();
         if (parseFloat($('.section-title').css('top')) > $('.sections-cover-container').outerHeight()
-        - 0.3*titleHeight || scroll >= scrollBottomLimit) {
+        || scroll >= scrollBottomLimit) {
           adjustTitleBottom();
         }
       }
@@ -91,11 +90,9 @@ $(document).ready(function () {
     } else {
       if (scrollIs('down')) {
         if (scroll > scrollTopLimit) {
-          if (titleTop < $('.sections-cover-container').outerHeight()
-        - 0.3*titleHeight) {
+          if (titleTop < $('.sections-cover-container').outerHeight()) {
             moveTitle();
-          } else if (titleTop > $('.sections-cover-container').outerHeight()
-        - 0.3*titleHeight) {
+          } else if (titleTop > $('.sections-cover-container').outerHeight()) {
             adjustTitleBottom();
           }
         }
@@ -105,9 +102,9 @@ $(document).ready(function () {
         }
       } else {
         if (scroll < scrollBottomLimit) {
-          if (titleTop > 0) {
+          if (titleTop > coverHeight/2) {
             moveTitle();
-          } else if (titleTop < 0) {
+          } else if (titleTop < coverHeight/2) {
             adjustTitleTop();
           }
         }

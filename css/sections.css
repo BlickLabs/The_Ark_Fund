@@ -14,15 +14,16 @@
 }
 
 .section-title {
+  border: none;
   font-size: 54px;
-  line-height: .85;
-  left: 50%;
+  left: 0;
   margin: 0;
+  top: 50%;
   padding: 0;
+  transform: translateY(-75%);
   position: absolute;
   text-align: center;
-  transform: translate(-50%, -70%);
-  border: none;
+  width: 100%;
 }
 
 .section-title,
@@ -142,9 +143,7 @@
   transform: none;
   left: 0;
   position: relative;
-  line-height: 1;
   text-align: center;
-
 }
 
 .portfolio.max-width,
