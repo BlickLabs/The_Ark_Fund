@@ -1,18 +1,18 @@
 (function () {
   function detectTouch(e) {
-    if (!$(e.target).is('nav .menu-trigger') && !$(e.target).is('nav .menu-container') && !$(e.target).closest('nav .menu-container').length && $('nav .menu-container').hasClass('active')) {
+    if (!$(e.target).is('nav .menu-trigger') && !$(e.target).closest('nav .menu-trigger').length && !$(e.target).is('nav .navbar-list-container') && !$(e.target).closest('nav .navbar-list-container').length && $('nav .navbar-list-container').hasClass('active')) {
       e.preventDefault();
-      $('nav .menu-container').removeClass('active');
+      $('nav .navbar-list-container').removeClass('active');
       $('body').removeClass('noscroll');
     }
   }
 
   function detectClick() {
-    if ($('nav .menu-container').hasClass('active')) {
-      $('nav .menu-container').removeClass('active');
+    if ($('nav .navbar-list-container').hasClass('active')) {
+      $('nav .navbar-list-container').removeClass('active');
       $('body').removeClass('noscroll');
     } else {
-      $('nav .menu-container').addClass('active');
+      $('nav .navbar-list-container').addClass('active');
       $('body').addClass('noscroll');
     }
   }

@@ -123,7 +123,7 @@
   color: black;
 }
 
-#navbar-trigger:checked ~ .navbar-list-container {
+.navbar-list-container.active {
   opacity: 1;
   right: 0;
 }
