@@ -153,7 +153,7 @@
     width: 100%;
   }
 
-  .homepage-diagram-row:nth-child(4) * {
+  .homepage-diagram-row:nth-child(4) .homepage-diagram-title {
     margin-left: 0;
     margin-top: 0;
   }
