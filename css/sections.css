@@ -58,6 +58,15 @@
   background-image: url('../img/foto-10.jpg');
 }
 
+#syndicates-cover {
+  background-image: url('../img/foto-24.jpg');
+  transition: all 0.2s;
+}
+
+.colour #syndicates-cover {
+  background-image: url('../img/foto-25.jpg');
+}
+
 #startups-cover {
   background-image: url('../img/foto-12.jpg');
 }
