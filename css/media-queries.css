@@ -76,11 +76,6 @@
     text-align: center !important;
   }
 
-  .common:not(.network) .white-container,
-  .common:not(.syndicates) .white-container {
-    padding: 80px 0;
-  }
-
   .common .white-container ol {
     left: -10px;
     margin: 0 auto;
@@ -88,8 +83,8 @@
     width: 80%;
   }
 
-  .common .white-container * {
-    text-align: justify !important;
+  .common .white-container li {
+    text-align: left !important;
   }
 
   #theark-navbar {
@@ -417,6 +412,17 @@
 
   .how-to-step-container:not(:first-child) {
     margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .homepage-introduction {
+    font-size: 15.5px;
+  }
+
+  .homepage-gray-divisor {
+    font-size: 17px;
+    padding: 30px;
   }
 }
 
