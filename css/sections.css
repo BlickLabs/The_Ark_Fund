@@ -60,33 +60,20 @@
 
 #syndicates-cover {
   background: url('../img/foto-26.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: right 0px bottom -63px;
-  -webkit-background-position: right 0px bottom -63px;
-  -moz-background-position: right 0px bottom -63px;
   transition: all 0.2s;
 }
 
 .colour #syndicates-cover {
   background-image: url('../img/foto-27.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: right 0px bottom -63px;
-  -webkit-background-position: right 0px bottom -63px;
-  -moz-background-position: right 0px bottom -63px;
 }
 
 #startups-cover {
-  background-image: url('../img/foto-12.jpg');
+  background-image: url('../img/foto-28.jpg');
+  //background-size: contain;
 }
 
 .colour #startups-cover {
-  background-image: url('../img/foto-13.jpg');
+  background-image: url('../img/foto-29.jpg');
 }
 
 #angels-cover {
