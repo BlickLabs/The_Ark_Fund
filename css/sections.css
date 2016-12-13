@@ -59,17 +59,15 @@
 }
 
 #syndicates-cover {
-  background: url('../img/foto-26.jpg') no-repeat center center fixed;
-  transition: all 0.2s;
+  background: url('../img/hands.jpg');
 }
 
 .colour #syndicates-cover {
-  background-image: url('../img/foto-27.jpg');
+  background-image: url('../img/hands-blue.jpg');
 }
 
 #startups-cover {
   background-image: url('../img/foto-28.jpg');
-  //background-size: contain;
 }
 
 .colour #startups-cover {

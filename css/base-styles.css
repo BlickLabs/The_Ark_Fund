@@ -166,8 +166,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .cover  {
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
 }
 
 .max-width {
